@@ -1,26 +1,488 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Design tokens — lấy từ Claude Design "An Gia Phát – Phương án B" */
+@theme {
+  --color-ink: #1b2330;
+  --color-ink-line: #333d4c;
+  --color-navy: #0e2447;
+  --color-brand: #1f4e96;
+  --color-brand-dark: #173d78;
+  --color-brand-soft: #eef2f8;
+  --color-brand-mist: #d3deee;
+  --color-sky: #9db8e0;
+  --color-paper: #f7f6f3;
+  --color-paper-2: #faf9f6;
+  --color-sand: #f1eee8;
+  --color-line: #e0dbd2;
+  --color-line-soft: #e8e4dc;
+  --color-line-strong: #c9c1b3;
+  --color-stone: #bdb6aa;
+  --color-muted: #5b6472;
+  --color-fog: #aeb7c4;
+  --color-fog-2: #b6bcc6;
+  --color-snow: #e9ebef;
+  --color-accent: #e07a2e;
+  --color-accent-dark: #b4561a;
+  --color-peach: #f9c49a;
+  --color-star: #e8912f;
+
+  --font-sans: var(--font-vietnam), system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-cond: var(--font-barlow), "Arial Narrow", sans-serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, Menlo, monospace;
+  --font-brand: var(--font-montserrat), var(--font-vietnam), sans-serif;
+  --font-script: var(--font-dancing), "Brush Script MT", cursive;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+/* Base rules nằm trong layer để class Tailwind (text-*, hover:*) ghi đè được */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  body {
+    background: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  input,
+  select,
+  textarea,
+  button {
+    font-family: inherit;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Typography helpers */
+.cd {
+  font-family: var(--font-cond);
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+}
+.mono {
+  font-family: var(--font-mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.brand {
+  font-family: var(--font-brand);
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+.script {
+  font-family: var(--font-script);
+  font-weight: 600;
+}
+.ic {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Buttons */
+.bp {
+  background: var(--color-brand);
+  color: #fff;
+}
+.bp:hover {
+  background: var(--color-brand-dark);
+  color: #fff;
+}
+.bw {
+  background: #fff;
+  color: var(--color-ink);
+}
+.bw:hover {
+  background: var(--color-sand);
+}
+.bo {
+  border: 1.5px solid var(--color-ink);
+  color: var(--color-ink);
+  background: transparent;
+}
+.bo:hover {
+  background: var(--color-ink);
+  color: #fff;
+}
+.bol {
+  border: 1.5px solid #fff;
+  color: #fff;
+  background: transparent;
+}
+.bol:hover {
+  background: #fff;
+  color: var(--color-brand);
+}
+.lk {
+  color: var(--color-snow);
+}
+.lk:hover {
+  color: var(--color-fog);
+}
+
+@layer components {
+  /* Form field */
+  .field {
+    height: 46px;
+    border: 1px solid var(--color-stone);
+    border-radius: 6px;
+    padding: 0 14px;
+    font-size: 15px;
+    background: var(--color-paper-2);
+    color: var(--color-ink);
+    width: 100%;
+  }
+  textarea.field {
+    height: auto;
+    padding: 12px 14px;
+    resize: vertical;
+  }
+  .field:focus {
+    outline: 2px solid var(--color-brand);
+    outline-offset: 0;
+    border-color: var(--color-brand);
+  }
+}
+
+/* Image placeholder (chưa có ảnh thật) */
+.ph {
+  background-color: var(--color-line-soft);
+  background-image: repeating-linear-gradient(
+    135deg,
+    rgba(27, 35, 48, 0.1) 0 1px,
+    transparent 1px 12px
+  );
+}
+
+/* Hover motion on cards */
+.qc {
+  transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1), box-shadow 0.4s;
+}
+.qc:hover {
+  transform: translateY(-10px) rotateX(6deg);
+  box-shadow: 0 30px 40px -28px rgba(10, 26, 58, 0.6);
+}
+.qc:hover .qn {
+  color: var(--color-brand);
+}
+.svc {
+  transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1), border-color 0.3s,
+    box-shadow 0.4s;
+}
+.svc:hover {
+  transform: translateY(-6px);
+  border-color: var(--color-brand);
+  box-shadow: 0 22px 34px -26px rgba(31, 78, 150, 0.7);
+}
+/* Dịch vụ dạng dòng: nền xanh quét từ trái sang khi hover */
+.svl {
+  isolation: isolate;
+}
+.svl::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: var(--color-brand);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+@media (min-width: 1024px) {
+  .svl::before {
+    inset: 0 -24px;
+  }
+}
+.svl:hover::before,
+.svl:focus-visible::before {
+  transform: scaleX(1);
+}
+.svl-n {
+  color: transparent;
+  -webkit-text-stroke: 1.5px var(--color-ink);
+  transition: color 0.3s, -webkit-text-stroke-color 0.3s;
+}
+.svl:hover .svl-n {
+  color: var(--color-accent);
+  -webkit-text-stroke-color: var(--color-accent);
+}
+.svl-a {
+  transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1), background 0.3s, color 0.3s, border-color 0.3s;
+}
+.svl:hover .svl-a {
+  transform: rotate(-45deg);
+  background: #fff;
+  border-color: #fff;
+  color: var(--color-brand);
+}
+.pj {
+  transition: transform 0.5s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.pj:hover {
+  transform: translateY(-6px) rotateY(-3deg);
+}
+.rv {
+  transition: transform 0.5s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.rv:hover {
+  transform: translateY(-6px) rotateY(-4deg);
+}
+
+/* Keyframes */
+@keyframes cubespin {
+  from {
+    transform: rotateX(-18deg) rotateY(0deg);
+  }
+  to {
+    transform: rotateX(-18deg) rotateY(360deg);
+  }
+}
+@keyframes bob {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+@keyframes halo {
+  from {
+    transform: scale(0.3);
+    opacity: 1;
+  }
+  to {
+    transform: scale(1.4);
+    opacity: 0;
+  }
+}
+@keyframes orbit {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes tick {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+@keyframes ring {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(157, 184, 224, 0.6);
+  }
+  50% {
+    box-shadow: 0 0 0 12px rgba(157, 184, 224, 0);
+  }
+}
+@keyframes travel {
+  from {
+    left: 0%;
+  }
+  to {
+    left: 100%;
+  }
+}
+.bob {
+  animation: bob 5s ease-in-out infinite;
+}
+.halo-anim {
+  animation: halo 2s ease-out infinite;
+}
+.orb {
+  animation: orbit 40s linear infinite;
+}
+.tk {
+  animation: tick 30s linear infinite;
+}
+.rg {
+  animation: ring 2.2s ease-in-out infinite;
+}
+.trv {
+  animation: travel 8s linear infinite;
+}
+/* Nút Zalo nổi: rung + sóng lan */
+@keyframes zalo-shake {
+  0%,
+  50%,
+  100% {
+    transform: rotate(0deg);
+  }
+  5%,
+  15%,
+  25%,
+  35% {
+    transform: rotate(-14deg);
+  }
+  10%,
+  20%,
+  30%,
+  40% {
+    transform: rotate(14deg);
+  }
+}
+@keyframes zalo-wave {
+  from {
+    transform: scale(1);
+    opacity: 0.55;
+  }
+  to {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
+@keyframes zalo-pop {
+  from {
+    transform: translateY(12px) scale(0.96);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+.zalo-shake {
+  animation: zalo-shake 2.4s ease-in-out infinite;
+}
+.zalo-wave {
+  animation: zalo-wave 1.8s ease-out infinite;
+}
+.zalo-wave-2 {
+  animation-delay: 0.9s;
+}
+.zalo-pop {
+  transform-origin: bottom right;
+  animation: zalo-pop 0.22s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .zalo-shake,
+  .zalo-wave,
+  .zalo-pop {
+    animation: none !important;
+  }
+  .zalo-wave {
+    display: none;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+  .bob,
+  .halo-anim,
+  .orb,
+  .tk,
+  .rg,
+  .trv,
+  .cube {
+    animation: none !important;
+  }
+  .qc,
+  .svc,
+  .svl::before,
+  .svl-a,
+  .pj,
+  .rv {
+    transition: none;
+  }
+}
+
+/* Bản đồ khu vực (MapLibre) */
+.om-office,
+.om-area {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  cursor: pointer;
+}
+.om-office-dot {
+  width: 22px;
+  height: 22px;
+  border-radius: 999px;
+  background: var(--color-accent);
+  border: 4px solid #fff;
+  box-shadow: 0 0 0 1px var(--color-ink);
+  animation: om-pulse 2s ease-out infinite;
+}
+.om-office-tag,
+.om-area-tag {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1.15;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.om-office-tag {
+  padding: 7px 10px;
+  background: var(--color-ink);
+  color: #fff;
+  font-size: 13px;
+}
+.om-office-tag small,
+.om-area-tag small {
+  font-family: var(--font-mono, ui-monospace, monospace);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  opacity: 0.7;
+}
+.om-area-dot {
+  width: 12px;
+  height: 12px;
+  background: var(--color-ink);
+  border: 2px solid #fff;
+  box-shadow: 0 0 0 1px var(--color-ink);
+  transition: transform 0.25s, background 0.25s;
+}
+.om-area-tag {
+  padding: 4px 7px;
+  background: #fff;
+  color: var(--color-ink);
+  box-shadow: inset 0 0 0 1px var(--color-ink);
+  font-size: 12px;
+  transition: background 0.25s, color 0.25s;
+}
+.om-area:hover .om-area-dot,
+.om-area.is-on .om-area-dot {
+  transform: rotate(45deg) scale(1.2);
+  background: var(--color-accent);
+}
+.om-area.is-on .om-area-tag {
+  background: var(--color-accent);
+  color: var(--color-ink);
+}
+.om-office.is-on .om-office-tag {
+  background: var(--color-accent);
+  color: var(--color-ink);
+}
+@keyframes om-pulse {
+  0% {
+    box-shadow: 0 0 0 1px var(--color-ink), 0 0 0 0 rgba(224, 122, 46, 0.55);
+  }
+  100% {
+    box-shadow: 0 0 0 1px var(--color-ink), 0 0 0 18px rgba(224, 122, 46, 0);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .om-office-dot {
+    animation: none;
+  }
 }

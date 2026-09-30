@@ -6,9 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "postinstall": "node -e \"for(const f of ['worker','shared'])require('fs').cpSync('node_modules/maplibre-gl/dist/maplibre-gl-'+f+'.mjs','public/maplibre/maplibre-gl-'+f+'.mjs')\""
   },
   "dependencies": {
+    "maplibre-gl": "^6.11.2",
     "next": "16.3.6",
     "react": "19.2.8",
     "react-dom": "19.2.8"

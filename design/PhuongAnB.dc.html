@@ -1,0 +1,487 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<title>An Gia Phát – Phương án B</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&amp;family=Be+Vietnam+Pro:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500;600&amp;family=Montserrat:wght@700;800&amp;family=Dancing+Script:wght@600;700&amp;display=swap">
+<style>
+body{margin:0;background:#1B2330}
+a{color:#1F4E96;text-decoration:none}a:hover{color:#173D78}
+.vb{font-family:'Be Vietnam Pro',system-ui,-apple-system,'Segoe UI',sans-serif;color:#1B2330;-webkit-font-smoothing:antialiased}
+.cd{font-family:'Barlow Condensed','Arial Narrow',sans-serif;text-transform:uppercase;letter-spacing:.01em}
+.mono{font-family:'JetBrains Mono',ui-monospace,Menlo,monospace;letter-spacing:.08em;text-transform:uppercase}
+.ic{fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.brand{font-family:'Montserrat','Be Vietnam Pro',sans-serif;font-weight:800;letter-spacing:-.01em}
+.script{font-family:'Dancing Script','Brush Script MT',cursive;font-weight:600}
+.star{fill:#E8912F;stroke:none}
+.nv a{color:#E9EBEF;display:flex;align-items:center;gap:6px;height:56px;padding:0 20px;border-right:1px solid #333D4C}
+.nv a:hover{background:#1F4E96;color:#fff}
+.bp{background:#1F4E96;color:#fff}.bp:hover{background:#173D78;color:#fff}
+.bw{background:#FFFFFF;color:#1B2330}.bw:hover{background:#F1EEE8;color:#1B2330}
+.bo{border:1.5px solid #1B2330;color:#1B2330;background:transparent}.bo:hover{background:#1B2330;color:#fff}
+.lk{color:#E9EBEF}.lk:hover{color:#AEB7C4}
+.qc{transition:transform .4s cubic-bezier(.2,.7,.2,1),box-shadow .4s}
+.qc:hover{transform:translateY(-10px) rotateX(6deg);box-shadow:0 30px 40px -28px rgba(10,26,58,.6)}
+.qc:hover .qn{color:#1F4E96}
+.tab{height:56px;display:flex;align-items:center;justify-content:space-between;padding:0 20px;border:1px solid #E0DBD2;border-radius:8px;background:#FFFFFF;color:#1B2330;font-size:17px;font-weight:600;font-family:inherit;cursor:pointer;width:100%;text-align:left;transition:background .25s,color .25s}
+.tab:hover{border-color:#1F4E96}
+.tab.on{background:#1F4E96;color:#FFFFFF;border-color:#1F4E96}
+.pill{height:44px;padding:0 18px;border-radius:6px;border:1px solid #E0DBD2;background:#FFFFFF;color:#1B2330;font-size:15px;font-weight:600;font-family:inherit;cursor:pointer;white-space:nowrap}
+.pill:hover{border-color:#1F4E96}
+.pill.on{background:#1B2330;border-color:#1B2330;color:#FFFFFF}
+.row{display:grid;grid-template-columns:64px minmax(0,1fr) minmax(0,1.4fr) 180px;gap:16px;align-items:center;height:62px;padding:0 24px;border-bottom:1px solid #E8E4DC;font-size:16px}
+.row.alt{background:#FAF9F6}
+.svc{transition:transform .4s cubic-bezier(.2,.7,.2,1),border-color .3s,box-shadow .4s}
+.svc:hover{transform:translateY(-6px);border-color:#1F4E96;box-shadow:0 22px 34px -26px rgba(31,78,150,.7)}
+.pj{transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+.pj:hover{transform:translateY(-6px) rotateY(-3deg)}
+.rv{transition:transform .5s cubic-bezier(.2,.7,.2,1)}
+.rv:hover{transform:translateY(-6px) rotateY(-4deg)}
+.ph{background-color:#E8E4DC;background-image:repeating-linear-gradient(135deg,rgba(27,35,48,.10) 0 1px,transparent 1px 12px)}
+.faq{width:100%;display:flex;justify-content:space-between;align-items:center;gap:24px;padding:22px 0;background:transparent;border:0;border-top:1px solid #E0DBD2;font-family:inherit;font-size:19px;font-weight:700;color:#1B2330;text-align:left;cursor:pointer}
+.faq:hover{color:#1F4E96}
+.tile{display:flex;flex-direction:column;align-items:flex-start;gap:12px;padding:18px;border:1.5px solid #E0DBD2;border-radius:8px;background:#FFFFFF;color:#1B2330;font-family:inherit;font-size:16px;font-weight:700;cursor:pointer;text-align:left;transition:border-color .2s,background .2s}
+.tile:hover{border-color:#1F4E96}
+.tile.on{border-color:#1F4E96;background:#EEF2F8;box-shadow:inset 0 0 0 1px #1F4E96}
+.stp{display:flex;align-items:center;gap:10px;font-size:14px;font-weight:600;color:#5B6472}
+.stp .sn{width:32px;height:32px;border-radius:50%;border:1.5px solid #C9C1B3;display:flex;align-items:center;justify-content:center;font-weight:700}
+.stp.on{color:#1B2330}.stp.on .sn{background:#1F4E96;border-color:#1F4E96;color:#fff}
+.stp.done .sn{background:#1B2330;border-color:#1B2330;color:#fff}
+.bol{border:1.5px solid #FFFFFF;color:#FFFFFF;background:transparent}.bol:hover{background:#FFFFFF;color:#1F4E96}
+.side a{color:#1B2330}.side a:hover{color:#1F4E96}
+/* 3D cube */
+.cstage{perspective:1500px;perspective-origin:50% 40%}
+.cube{position:absolute;left:50%;top:50%;width:0;height:0;transform-style:preserve-3d;transform:rotateX(-18deg) rotateY(32deg)}
+.cf{position:absolute;left:-150px;top:-150px;width:300px;height:300px;box-sizing:border-box;border:2px solid #1B2330;padding:28px;display:flex;flex-direction:column;justify-content:space-between;backface-visibility:hidden}
+.c1{background:#F7F6F3;color:#1B2330}.c2{background:#1F4E96;color:#fff}.c3{background:#1B2330;color:#fff}
+/* map plane */
+.mstage{perspective:1300px}
+.plane{position:absolute;left:50%;top:50%;width:540px;height:400px;margin-left:-270px;margin-top:-200px;transform-style:preserve-3d;transform:rotateX(58deg) rotateZ(-28deg);background-color:#F7F6F3;background-image:linear-gradient(rgba(31,78,150,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(31,78,150,.12) 1px,transparent 1px);background-size:27px 27px;border:2px solid #1B2330;box-shadow:0 60px 60px -30px rgba(10,26,58,.4)}
+.road{position:absolute;background:#DDD7CC}
+.blk{position:absolute;background:#E8E4DC;border:1px solid #C9C1B3}
+.river{position:absolute;background:#AEB7C4}
+.dot{position:absolute;width:0;height:0;transform-style:preserve-3d}
+.dot .pt{position:absolute;left:-7px;top:-7px;width:14px;height:14px;border-radius:50%;background:#1B2330;border:2px solid #F7F6F3}
+.dot.on .pt{background:#1F4E96;left:-9px;top:-9px;width:18px;height:18px}
+.dot .lb{position:absolute;left:14px;top:-9px;font-size:12px;font-weight:700;white-space:nowrap;color:#1B2330}
+.beam{position:absolute;left:-2px;bottom:0;width:4px;height:110px;background:#1F4E96;transform-origin:50% 100%;transform:rotateZ(28deg) rotateX(-90deg);transform-style:preserve-3d}
+.flag{position:absolute;left:-10px;top:-44px;background:#1F4E96;color:#fff;font-weight:700;font-size:15px;padding:8px 14px;border-radius:6px;white-space:nowrap}
+.halo{position:absolute;left:-40px;top:-40px;width:80px;height:80px;border-radius:50%;border:2px solid #1F4E96}
+/* motion */
+@keyframes cubespin{from{transform:rotateX(-18deg) rotateY(0deg)}to{transform:rotateX(-18deg) rotateY(360deg)}}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+@keyframes halo{from{transform:scale(.3);opacity:1}to{transform:scale(1.4);opacity:0}}
+@keyframes orbit{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+@keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes ring{0%,100%{box-shadow:0 0 0 0 rgba(157,184,224,.6)}50%{box-shadow:0 0 0 12px rgba(157,184,224,0)}}
+@keyframes travel{from{left:0%}to{left:100%}}
+.anim .cube{animation:cubespin 22s linear infinite}
+.anim .bob{animation:bob 5s ease-in-out infinite}
+.anim .halo{animation:halo 2s ease-out infinite}
+.anim .orb{animation:orbit 40s linear infinite}
+.anim .tk{animation:tick 30s linear infinite}
+.anim .rg{animation:ring 2.2s ease-in-out infinite}
+.anim .trv{animation:travel 8s linear infinite}
+@media (prefers-reduced-motion: reduce){.anim .cube,.anim .bob,.anim .halo,.anim .orb,.anim .tk,.anim .rg,.anim .trv{animation:none}}
+input,select,textarea{font-family:inherit}
+</style>
+</helmet>
+<div class="{{rootClass}}" style="width: 1440px; height: 8000px; display: flex; flex-direction: column; background: #F7F6F3; position: relative; overflow: hidden">
+
+<!-- Header -->
+<div style="height: 120px; flex-shrink: 0; background: #FFFFFF; display: flex; align-items: stretch; padding-left: 80px; border-bottom: 1px solid #E8E4DC">
+<a href="PhuongAnB.dc.html" aria-label="An Gia Phát – Trang chủ" style="display: flex; align-items: center; gap: 12px; width: 320px; flex-shrink: 0; color: #1F4E96"><svg viewBox="0 0 64 64" width="76" height="76" aria-hidden="true"><path d="M5 29L32 7l27 22" style="fill: none; stroke: #1F4E96; stroke-width: 5.5; stroke-linejoin: miter"></path><rect x="44" y="9" width="6.5" height="12" style="fill: #1F4E96"></rect><rect x="29" y="15" width="2.7" height="2.7" style="fill: #1F4E96"></rect><rect x="32.4" y="15" width="2.7" height="2.7" style="fill: #1F4E96"></rect><rect x="29" y="18.4" width="2.7" height="2.7" style="fill: #1F4E96"></rect><rect x="32.4" y="18.4" width="2.7" height="2.7" style="fill: #1F4E96"></rect><path d="M4 51Q32 69 60 45" style="fill: none; stroke: #FFFFFF; stroke-width: 6.5; stroke-linecap: round"></path><path d="M4 51Q32 69 60 45" style="fill: none; stroke: #1F4E96; stroke-width: 3; stroke-linecap: round"></path><path d="M13 57L25 26h6.5l12 31zM20.5 57L28 38l7.5 19z" style="fill: #1F4E96; fill-rule: evenodd"></path><rect x="25.3" y="47" width="2.6" height="2.6" style="fill: #1F4E96"></rect><rect x="28.6" y="47" width="2.6" height="2.6" style="fill: #1F4E96"></rect><rect x="25.3" y="50.3" width="2.6" height="2.6" style="fill: #1F4E96"></rect><rect x="28.6" y="50.3" width="2.6" height="2.6" style="fill: #1F4E96"></rect><path d="M39.5 26H49a9 9 0 0 1 0 18h-3.5v13h-6zM45.5 32v6H49a3 3 0 0 0 0-6z" style="fill: #1F4E96; fill-rule: evenodd"></path><path d="M52 36l5 5" style="fill: none; stroke: #1F4E96; stroke-width: 2.4; stroke-linecap: round"></path></svg><div style="display: flex; flex-direction: column; gap: 5px"><div class="brand" style="font-size: 27px; line-height: 1; color: #1F4E96">AN GIA PHÁT</div><div style="display: flex; align-items: center; gap: 6px"><span style="width: 12px; height: 1.5px; background: #1F4E96"></span><span class="brand" style="font-size: 9.5px; font-weight: 700; letter-spacing: .05em; color: #1F4E96">SỬA CHỮA - CẢI TẠO NHÀ CỬA</span><span style="width: 12px; height: 1.5px; background: #1F4E96"></span></div><div class="script" style="font-size: 13px; color: #1F4E96">Uy Tín - Chất Lượng - Vì Ngôi Nhà Của Bạn</div></div></a>
+<div style="flex-grow: 1; display: flex; flex-direction: column; justify-content: center; gap: 6px; padding: 0 40px; border-left: 1px solid #E8E4DC; width: 559px">
+<div class="cd" style="font-size: 32px; font-weight: 800; line-height: 1.05; color: #1B2330; width: 536px">Uy tín – Chất lượng – <span style="color: #1F4E96">Vì ngôi nhà của bạn</span></div>
+<div class="cd" style="font-size: 20px; font-weight: 600; color: #5B6472">Khảo sát tận nơi · Báo giá rõ ràng, không phát sinh · Bảo hành dài hạn</div>
+</div>
+<a class="bp" href="tel:0869577686" style="width: 380px; flex-shrink: 0; clip-path: polygon(14% 0, 100% 0, 100% 100%, 0 100%); display: flex; align-items: center; justify-content: flex-end; gap: 18px; padding-right: 80px">
+<div class="rg" style="width: 56px; height: 56px; border-radius: 50%; border: 2px solid #fff; display: flex; align-items: center; justify-content: center"><svg class="ic" viewBox="0 0 24 24" width="26" height="26"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A17 17 0 0 1 3 5a2 2 0 0 1 2-2z"></path></svg></div>
+<div style="display: flex; flex-direction: column"><span class="cd" style="font-size: 22px; font-weight: 700; color: #F9C49A">Hotline 24/7</span><span class="cd" style="font-size: 38px; font-weight: 800; line-height: 1">0869 577 686</span></div>
+</a>
+</div>
+
+<!-- Nav -->
+<nav class="nv" style="height: 56px; flex-shrink: 0; background: #1B2330; display: flex; padding: 0 80px; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: .02em">
+<a href="PhuongAnB.dc.html" style="border-left: 1px solid #333D4C; background: #1F4E96">Trang chủ</a>
+<a href="GioiThieu.dc.html">Giới thiệu</a>
+<a href="DichVu.dc.html">Dịch vụ<svg class="ic" viewBox="0 0 24 24" width="14" height="14"><path d="M6 9l6 6 6-6"></path></svg></a>
+<a href="DichVuChiTiet.dc.html">Chống thấm</a>
+<a href="BaoGia.dc.html">Báo giá</a>
+<a href="CongTrinh.dc.html">Công trình</a>
+<a href="TinTuc.dc.html">Tin tức</a>
+<a href="LienHe.dc.html">Liên hệ</a>
+</nav>
+
+<!-- Strip -->
+<div style="height: 52px; flex-shrink: 0; background: #FFFFFF; border-bottom: 1px solid #E8E4DC; display: flex; align-items: center; gap: 24px; padding: 0 80px">
+<div class="mono" style="flex-shrink: 0; height: 30px; padding: 0 12px; border-radius: 4px; background: #E07A2E; color: #1B2330; font-size: 11px; font-weight: 600; display: flex; align-items: center">Thông báo</div>
+<div style="flex-grow: 1; overflow: hidden; white-space: nowrap">
+<div class="tk" style="display: inline-flex; font-size: 15px; font-weight: 600; color: #1B2330">
+<span style="padding-right: 64px">Nhận sửa chữa, cải tạo nhà cửa tất cả quận huyện tại TP.HCM — <span style="color: #1F4E96">Gửi ảnh hiện trạng qua Zalo 0869 577 686 để được tư vấn hướng xử lý</span> — Làm việc 7:00 – 21:00, cả tuần.</span>
+<span style="padding-right: 64px">Nhận sửa chữa, cải tạo nhà cửa tất cả quận huyện tại TP.HCM — <span style="color: #1F4E96">Gửi ảnh hiện trạng qua Zalo 0869 577 686 để được tư vấn hướng xử lý</span> — Làm việc 7:00 – 21:00, cả tuần.</span>
+</div>
+</div>
+<label style="flex-shrink: 0; display: flex; height: 38px; border: 1px solid #1B2330; border-radius: 6px; overflow: hidden"><input type="search" aria-label="Tìm kiếm" placeholder="Nhập từ khóa…" style="width: 240px; border: 0; padding: 0 12px; font-size: 14px; background: #fff"><span style="width: 44px; background: #1B2330; color: #fff; display: flex; align-items: center; justify-content: center"><svg class="ic" viewBox="0 0 24 24" width="18" height="18"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-4-4"></path></svg></span></label>
+</div>
+
+<!-- Hero -->
+<div style="height: 700px; flex-shrink: 0; background: #F7F6F3; color: #1B2330; display: flex; padding: 0 80px; position: relative; overflow: hidden">
+<div style="position: absolute; inset: 0; background-image: linear-gradient(rgba(27,35,48,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(27,35,48,.05) 1px,transparent 1px); background-size: 40px 40px"></div>
+<div style="width: 700px; flex-shrink: 0; display: flex; flex-direction: column; justify-content: center; gap: 26px; position: relative; padding-bottom: 60px">
+<div class="mono" style="font-size: 13px; color: #1F4E96; display: flex; align-items: center; gap: 12px"><span style="width: 40px; height: 2px; background: #E07A2E"></span>Sửa chữa – Cải tạo nhà cửa</div>
+<h1 class="cd" style="margin: 0; font-size: 100px; line-height: .9; font-weight: 800">Sửa chữa nhà<br><span style="color: #1F4E96">trọn gói</span> TP.HCM</h1>
+<p style="margin: 0; font-size: 19px; line-height: 1.6; color: #5B6472; max-width: 560px">Chống thấm, sơn nước, ốp lát, trần thạch cao, điện nước, cửa sắt, thông cống — một đầu mối từ khảo sát, báo giá đến thi công và bảo hành.</p>
+<div style="display: flex; gap: 14px">
+<a class="bp" href="tel:0869577686" style="height: 60px; padding: 0 28px; border-radius: 8px; display: flex; align-items: center; gap: 12px; font-size: 17px; font-weight: 700"><svg class="ic" viewBox="0 0 24 24" width="20" height="20"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A17 17 0 0 1 3 5a2 2 0 0 1 2-2z"></path></svg>Gọi 0869 577 686</a>
+<a class="bo" href="#bao-gia" style="height: 60px; padding: 0 28px; border-radius: 8px; display: flex; align-items: center; gap: 12px; font-size: 17px; font-weight: 700">Nhận báo giá<svg class="ic" viewBox="0 0 24 24" width="20" height="20"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px; max-width: 600px; padding: 18px; border: 1px solid #E0DBD2; border-radius: 8px; background: #FFFFFF; box-shadow: 0 14px 30px -24px rgba(27,35,48,.5)">
+<label for="cb-phone" style="font-size: 14px; font-weight: 600; color: #1B2330">Để lại số điện thoại — kỹ thuật viên gọi lại tư vấn</label>
+<div style="display: flex; gap: 10px"><input id="cb-phone" type="tel" placeholder="09xx xxx xxx" style="flex-grow: 1; height: 50px; border: 1px solid #BDB6AA; border-radius: 6px; padding: 0 14px; font-size: 16px; background: #FFFFFF; color: #1B2330"><button type="button" class="bp" style="height: 50px; padding: 0 22px; border: 0; border-radius: 6px; font-size: 16px; font-weight: 700; font-family: inherit; cursor: pointer; white-space: nowrap">Gọi lại cho tôi</button></div>
+</div>
+</div>
+<div class="cstage" style="flex-grow: 1; position: relative">
+<div class="orb" style="position: absolute; left: 50%; top: 46%; width: 540px; height: 540px; margin-left: -270px; margin-top: -270px; border: 1.5px dashed rgba(31,78,150,.3); border-radius: 50%"><div style="position: absolute; left: 50%; top: -7px; width: 14px; height: 14px; margin-left: -7px; border-radius: 50%; background: #E07A2E"></div></div>
+<div class="bob" style="position: absolute; inset: 0; transform-style: preserve-3d">
+<div class="cube" style="top: 46%">
+<div class="cf c1" style="transform: translateZ(150px)"><div style="display: flex; justify-content: space-between"><svg class="ic" viewBox="0 0 24 24" width="56" height="56"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"></path><path d="M9.5 14.5a2.5 2.5 0 0 0 2.5 2.5"></path></svg><span class="mono" style="font-size: 12px">S-02</span></div><div class="cd" style="font-size: 44px; font-weight: 800; line-height: .95">Chống<br>thấm</div></div>
+<div class="cf c2" style="transform: rotateY(90deg) translateZ(150px)"><div style="display: flex; justify-content: space-between"><svg class="ic" viewBox="0 0 24 24" width="56" height="56"><rect x="3" y="3" width="15" height="6" rx="1.5"></rect><path d="M18 6h2v5h-8v3"></path><rect x="10.5" y="14" width="3" height="7" rx="1"></rect></svg><span class="mono" style="font-size: 12px">S-03</span></div><div class="cd" style="font-size: 44px; font-weight: 800; line-height: .95">Sơn nước<br>Sơn dầu</div></div>
+<div class="cf c3" style="transform: rotateY(180deg) translateZ(150px)"><div style="display: flex; justify-content: space-between"><svg class="ic" viewBox="0 0 24 24" width="56" height="56"><rect x="3" y="3" width="8" height="8"></rect><rect x="13" y="3" width="8" height="8"></rect><rect x="3" y="13" width="8" height="8"></rect><rect x="13" y="13" width="8" height="8"></rect></svg><span class="mono" style="font-size: 12px">S-04</span></div><div class="cd" style="font-size: 44px; font-weight: 800; line-height: .95">Ốp lát<br>gạch</div></div>
+<div class="cf c2" style="transform: rotateY(-90deg) translateZ(150px)"><div style="display: flex; justify-content: space-between"><svg class="ic" viewBox="0 0 24 24" width="56" height="56"><path d="M13 2L4 14h7l-1 8 9-12h-7z"></path></svg><span class="mono" style="font-size: 12px">S-06</span></div><div class="cd" style="font-size: 44px; font-weight: 800; line-height: .95">Điện<br>nước</div></div>
+<div class="cf c1" style="transform: rotateX(90deg) translateZ(150px)"><div style="display: flex; justify-content: space-between"><svg class="ic" viewBox="0 0 24 24" width="56" height="56"><path d="M2 5h20"></path><path d="M4 5v4h16V5"></path><path d="M12 9v4"></path><path d="M8.5 17.5L12 13l3.5 4.5z"></path></svg><span class="mono" style="font-size: 12px">S-05</span></div><div class="cd" style="font-size: 44px; font-weight: 800; line-height: .95">Trần<br>thạch cao</div></div>
+<div class="cf c3" style="transform: rotateX(-90deg) translateZ(150px)"><div style="display: flex; justify-content: space-between"><svg class="ic" viewBox="0 0 24 24" width="56" height="56"><path d="M3 21V9a9 5 0 0 1 18 0v12"></path><path d="M2 21h20"></path><path d="M7.5 21V8.5M12 21V6.5M16.5 21V8.5"></path></svg><span class="mono" style="font-size: 12px">S-07</span></div><div class="cd" style="font-size: 44px; font-weight: 800; line-height: .95">Cửa<br>sắt</div></div>
+</div>
+</div>
+</div>
+<div style="position: absolute; left: 20px; bottom: 90px; display: flex; flex-direction: column; gap: 12px">
+<a class="bp rg" href="tel:0869577686" aria-label="Gọi điện" style="width: 52px; height: 52px; border-radius: 50%; display: flex; align-items: center; justify-content: center"><svg class="ic" viewBox="0 0 24 24" width="22" height="22"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A17 17 0 0 1 3 5a2 2 0 0 1 2-2z"></path></svg></a>
+<a class="bw" href="#" aria-label="Nhắn Zalo" style="border: 1px solid #E0DBD2; width: 52px; height: 52px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 800">Zalo</a>
+<a class="bw" href="#" aria-label="Nhắn Messenger" style="border: 1px solid #E0DBD2; width: 52px; height: 52px; border-radius: 50%; display: flex; align-items: center; justify-content: center"><svg class="ic" viewBox="0 0 24 24" width="22" height="22"><path d="M12 3C7 3 3 6.6 3 11c0 2.5 1.3 4.7 3.3 6.2V21l3.3-1.8c.8.2 1.6.3 2.4.3 5 0 9-3.6 9-8s-4-8.5-9-8.5z"></path><path d="M7.5 13l3-3 2.5 2 3.5-3"></path></svg></a>
+</div>
+</div>
+
+<!-- Quote cards -->
+<div style="flex-shrink: 0; height: 230px; padding: 0 80px; box-sizing: border-box; margin-top: -80px; position: relative; perspective: 1200px">
+<div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px">
+<sc-for list="{{quotes}}" as="q" hint-placeholder-count="4">
+<a class="qc" href="#bao-gia" style="background: #FFFFFF; border: 1px solid #1B2330; border-radius: 8px; height: 180px; padding: 22px; box-sizing: border-box; display: flex; gap: 16px; color: #1B2330; box-shadow: 0 1px 0 #1B2330">
+<div class="cd qn" style="font-size: 96px; font-weight: 800; line-height: .8; color: #1B2330; transition: color .3s">{{q.n}}</div>
+<div style="display: flex; flex-direction: column; justify-content: space-between; flex-grow: 1"><div class="cd" style="font-size: 24px; font-weight: 800; line-height: 1.05">{{q.t}}</div><div style="display: flex; flex-direction: column; gap: 4px; border-top: 1px solid #E8E4DC; padding-top: 10px"><span style="font-size: 13px; color: #5B6472">{{q.s}}</span><span style="font-size: 15px; font-weight: 700; color: #1F4E96">Nhận báo giá →</span></div></div>
+</a>
+</sc-for>
+</div>
+</div>
+
+<!-- Stats -->
+<div style="height: 190px; flex-shrink: 0; padding: 0 80px; box-sizing: border-box">
+<div style="height: 150px; background: #FFFFFF; border: 1px solid #E0DBD2; border-radius: 8px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr))">
+<sc-for list="{{stats}}" as="s" hint-placeholder-count="4">
+<div style="display: flex; align-items: center; gap: 18px; padding: 0 32px; border-left: 1px solid #E8E4DC"><div class="cd" style="font-size: 64px; font-weight: 800; line-height: 1; color: #1F4E96">{{s.v}}</div><div style="font-size: 15px; font-weight: 600; line-height: 1.35; color: #1B2330">{{s.l}}</div></div>
+</sc-for>
+</div>
+</div>
+
+<!-- Services -->
+<div style="height: 940px; flex-shrink: 0; padding: 70px 80px 0; box-sizing: border-box; display: flex; flex-direction: column; gap: 40px">
+<div style="display: flex; justify-content: space-between; align-items: flex-end">
+<div style="display: flex; flex-direction: column; gap: 10px"><div class="mono" style="font-size: 13px; color: #1F4E96">Dịch vụ chủ lực</div><h2 class="cd" style="margin: 0; font-size: 64px; line-height: .95; font-weight: 800">8 hạng mục <span style="color: #1F4E96">một đầu mối</span></h2></div>
+<p style="margin: 0; max-width: 400px; font-size: 16px; line-height: 1.6; color: #5B6472">Mỗi hạng mục đều được khảo sát tận nơi, tư vấn phương án phù hợp hiện trạng và ngân sách của gia đình.</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px">
+<sc-for list="{{services}}" as="v" hint-placeholder-count="8">
+<div class="svc" style="background: #FFFFFF; border: 1px solid #E0DBD2; border-radius: 8px; padding: 24px; height: 340px; box-sizing: border-box; display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; justify-content: space-between; align-items: center"><span class="mono" style="font-size: 12px; color: #1F4E96">{{v.code}}</span><span class="mono" style="font-size: 11px; color: #5B6472">{{v.time}}</span></div>
+<h3 class="cd" style="margin: 0; font-size: 30px; font-weight: 800; line-height: 1">{{v.t}}</h3>
+<p style="margin: 0; font-size: 14px; line-height: 1.55; color: #5B6472">{{v.d}}</p>
+<div style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 500">
+<sc-for list="{{v.b}}" as="x" hint-placeholder-count="3"><div style="display: flex; gap: 8px; align-items: center"><svg class="ic" viewBox="0 0 24 24" width="16" height="16" style="color: #1F4E96; flex-shrink: 0"><path d="M5 12l4.5 4.5L19 7"></path></svg>{{x}}</div></sc-for>
+</div>
+<a href="DichVuChiTiet.dc.html" style="margin-top: auto; padding-top: 12px; border-top: 1px dashed #E0DBD2; display: flex; justify-content: space-between; align-items: center; font-size: 15px; font-weight: 700; color: #1F4E96">Nhận tư vấn &amp; báo giá<svg class="ic" viewBox="0 0 24 24" width="20" height="20"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</div>
+</sc-for>
+
+</div>
+</div>
+
+<!-- Areas with 3D map -->
+<div style="height: 720px; flex-shrink: 0; background: #FFFFFF; border-top: 1px solid #E8E4DC; padding: 90px 80px 0; box-sizing: border-box; display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; justify-content: space-between; align-items: flex-end">
+<div style="display: flex; flex-direction: column; gap: 10px"><div class="mono" style="font-size: 13px; color: #1F4E96">Khu vực phục vụ</div><h2 class="cd" style="margin: 0; font-size: 64px; line-height: .95; font-weight: 800">Có mặt nhanh <span style="color: #1F4E96">khắp TP.HCM</span></h2></div>
+<p style="margin: 0; max-width: 380px; font-size: 16px; line-height: 1.6; color: #5B6472">Chọn khu vực để xem thời gian có mặt dự kiến.</p>
+</div>
+<div style="display: flex; gap: 32px; height: 480px">
+<div style="width: 380px; flex-shrink: 0; display: flex; flex-direction: column; gap: 10px">
+<sc-for list="{{areas}}" as="a" hint-placeholder-count="5">
+<button type="button" class="{{a.tabCls}}" onClick="{{a.pick}}"><span>{{a.name}}</span><span class="mono" style="font-size: 11px; letter-spacing: .04em">{{a.eta}}</span></button>
+</sc-for>
+<div style="margin-top: auto; background: #F7F6F3; border: 1px solid #E0DBD2; border-radius: 8px; padding: 18px; display: flex; flex-direction: column; gap: 6px">
+<div class="mono" style="font-size: 11px; color: #1F4E96">{{cur.name}}</div>
+<div style="font-size: 15px; font-weight: 600; line-height: 1.5">{{cur.line}}</div>
+<div style="font-size: 13px; color: #5B6472; line-height: 1.5">Văn phòng: 54/6A đường TTH 29, P. Tân Thới Hiệp, Quận 12</div>
+</div>
+</div>
+<div class="mstage" style="flex-grow: 1; position: relative; background: #F1EEE8; border-radius: 8px; border: 1px solid #E0DBD2; overflow: hidden">
+<div class="mono" style="position: absolute; left: 24px; top: 20px; font-size: 11px; color: #5B6472">Sơ đồ minh họa · không theo tỉ lệ</div>
+<div class="plane">
+<div class="river" style="left: 70%; top: 0; width: 22px; height: 400px; transform: skewX(-12deg)"></div>
+<div class="road" style="left: 0; top: 36%; width: 540px; height: 10px"></div>
+<div class="road" style="left: 42%; top: 0; width: 10px; height: 400px"></div>
+<div class="road" style="left: 0; top: 70%; width: 380px; height: 8px"></div>
+<div class="blk" style="left: 8%; top: 6%; width: 90px; height: 60px"></div>
+<div class="blk" style="left: 52%; top: 50%; width: 70px; height: 50px"></div>
+<div class="blk" style="left: 10%; top: 45%; width: 60px; height: 40px"></div>
+<div class="blk" style="left: 82%; top: 60%; width: 70px; height: 70px"></div>
+<sc-for list="{{areas}}" as="a" hint-placeholder-count="5">
+<div class="{{a.dotCls}}" style="{{a.pos}}">
+<sc-if value="{{a.on}}" hint-placeholder-val="{{ false }}"><div class="halo"></div><div class="beam"><div class="flag">{{a.name}}</div></div></sc-if>
+<div class="pt"></div>
+<sc-if value="{{a.off}}" hint-placeholder-val="{{ true }}"><div class="lb">{{a.name}}</div></sc-if>
+</div>
+</sc-for>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Pricing -->
+<div id="bao-gia" style="height: 920px; flex-shrink: 0; padding: 90px 80px 0; box-sizing: border-box; display: flex; flex-direction: column; gap: 28px">
+<div style="display: flex; justify-content: space-between; align-items: flex-end">
+<div style="display: flex; flex-direction: column; gap: 10px"><div class="mono" style="font-size: 13px; color: #1F4E96">Báo giá theo hạng mục</div><h2 class="cd" style="margin: 0; font-size: 64px; line-height: .95; font-weight: 800">Chọn hạng mục, <span style="color: #1F4E96">nhận báo giá chi tiết</span></h2></div>
+<p style="margin: 0; max-width: 400px; font-size: 15px; line-height: 1.6; color: #5B6472">Mỗi ngôi nhà một hiện trạng khác nhau. Kỹ thuật viên khảo sát, đo đạc và gửi báo giá chi tiết từng hạng mục trước khi thi công.</p>
+</div>
+<div style="display: flex; gap: 8px; flex-wrap: wrap">
+<sc-for list="{{cats}}" as="c" hint-placeholder-count="8">
+<button type="button" class="{{c.cls}}" onClick="{{c.pick}}">{{c.label}}</button>
+</sc-for>
+</div>
+<div style="border: 1px solid #1B2330; border-radius: 8px; overflow: hidden; background: #FFFFFF">
+<div class="row mono" style="background: #1B2330; color: #fff; font-size: 12px; height: 50px; border-bottom: 0"><span>STT</span><span>Hạng mục công việc</span><span>Nội dung thi công</span><span></span></div>
+<sc-for list="{{rows}}" as="r" hint-placeholder-count="4">
+<div class="{{r.cls}}"><span class="mono" style="font-size: 13px; color: #5B6472">{{r.no}}</span><span style="font-weight: 700">{{r.item}}</span><span style="color: #5B6472; font-size: 15px">{{r.scope}}</span><a class="bo" href="#lien-he" style="justify-self: end; height: 40px; padding: 0 16px; border-radius: 6px; display: flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 700">Nhận báo giá<svg class="ic" viewBox="0 0 24 24" width="16" height="16"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></div>
+</sc-for>
+</div>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px">
+<a class="bp" href="tel:0869577686" style="height: 96px; border-radius: 8px; padding: 0 24px; display: flex; align-items: center; gap: 16px"><span class="cd" style="width: 48px; height: 48px; border-radius: 50%; border: 1.5px solid #FFFFFF; display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: 800; flex-shrink: 0">1</span><span style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 13px; color: #D3DEEE">Gọi hotline</span><span class="cd" style="font-size: 30px; font-weight: 800; line-height: 1">0869 577 686</span></span></a>
+<a class="bw" href="#" style="height: 96px; border-radius: 8px; padding: 0 24px; display: flex; align-items: center; gap: 16px; border: 1px solid #1B2330"><span class="cd" style="width: 48px; height: 48px; border-radius: 50%; background: #1B2330; color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: 800; flex-shrink: 0">2</span><span style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 13px; color: #5B6472">Gửi ảnh hiện trạng</span><span class="cd" style="font-size: 30px; font-weight: 800; line-height: 1">Nhắn Zalo</span></span></a>
+<a class="bw" href="#lien-he" style="height: 96px; border-radius: 8px; padding: 0 24px; display: flex; align-items: center; gap: 16px; border: 1px solid #1B2330"><span class="cd" style="width: 48px; height: 48px; border-radius: 50%; background: #1B2330; color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: 800; flex-shrink: 0">3</span><span style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 13px; color: #5B6472">Đặt lịch khảo sát</span><span class="cd" style="font-size: 30px; font-weight: 800; line-height: 1">Điền form</span></span></a>
+</div>
+</div>
+
+<!-- Process -->
+<div style="height: 480px; flex-shrink: 0; background: #F1EEE8; color: #1B2330; padding: 90px 80px 0; box-sizing: border-box; display: flex; flex-direction: column; gap: 52px">
+<div style="display: flex; justify-content: space-between; align-items: flex-end">
+<div style="display: flex; flex-direction: column; gap: 10px"><div class="mono" style="font-size: 13px; color: #1F4E96">Quy trình làm việc</div><h2 class="cd" style="margin: 0; font-size: 64px; line-height: .95; font-weight: 800">6 bước <span style="color: #1F4E96">minh bạch</span></h2></div>
+<span class="mono" style="font-size: 12px; color: #5B6472">Thời gian mỗi bước là dự kiến</span>
+</div>
+<div style="position: relative">
+<div style="position: absolute; left: 0; right: 0; top: 23px; height: 2px; background: #D9D3C8"><div class="trv" style="position: absolute; top: -5px; left: 0; width: 12px; height: 12px; margin-left: -6px; border-radius: 50%; background: #E07A2E"></div></div>
+<div style="display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 20px; position: relative">
+<sc-for list="{{steps}}" as="p" hint-placeholder-count="6">
+<div style="display: flex; flex-direction: column; gap: 10px"><div class="cd" style="width: 48px; height: 48px; border-radius: 6px; background: #1F4E96; display: flex; align-items: center; justify-content: center; font-size: 26px; font-weight: 800">{{p.n}}</div><div class="cd" style="font-size: 24px; font-weight: 800; margin-top: 10px; line-height: 1">{{p.t}}</div><div style="font-size: 14px; line-height: 1.55; color: #5B6472">{{p.d}}</div><div class="mono" style="font-size: 11px; color: #B4561A">{{p.time}}</div></div>
+</sc-for>
+</div>
+</div>
+</div>
+
+<!-- Projects -->
+<div id="cong-trinh" style="height: 900px; flex-shrink: 0; padding: 90px 80px 0; box-sizing: border-box; display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; justify-content: space-between; align-items: flex-end">
+<div style="display: flex; flex-direction: column; gap: 10px"><div class="mono" style="font-size: 13px; color: #1F4E96">Công trình</div><h2 class="cd" style="margin: 0; font-size: 64px; line-height: .95; font-weight: 800">Công trình <span style="color: #1F4E96">tiêu biểu</span></h2></div>
+<div style="display: flex; gap: 8px"><a class="bo" href="CongTrinh.dc.html" style="height: 44px; padding: 0 18px; border-radius: 6px; display: flex; align-items: center; font-weight: 600; font-size: 15px">Đang thi công</a><a class="bo" href="CongTrinh.dc.html" style="height: 44px; padding: 0 18px; border-radius: 6px; display: flex; align-items: center; font-weight: 600; font-size: 15px">Xem tất cả công trình</a></div>
+</div>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; perspective: 1400px">
+<sc-for list="{{projects}}" as="j" hint-placeholder-count="6">
+<div class="pj" style="background: #FFFFFF; border: 1px solid #E0DBD2; border-radius: 8px; overflow: hidden; height: 330px; display: flex; flex-direction: column">
+<div class="ph" style="height: 190px; position: relative; flex-shrink: 0"><span class="mono" style="position: absolute; left: 16px; top: 16px; background: #1B2330; color: #fff; font-size: 11px; padding: 6px 10px; border-radius: 4px">{{j.cat}}</span><span class="mono" style="position: absolute; left: 50%; top: 55%; transform: translate(-50%,-50%); font-size: 11px; color: #5B6472">[Ảnh công trình]</span></div>
+<div style="padding: 18px 20px; display: flex; flex-direction: column; gap: 8px"><div class="cd" style="font-size: 25px; font-weight: 800; line-height: 1.05">{{j.name}}</div><div style="display: flex; gap: 16px; font-size: 13px; color: #5B6472"><span>{{j.area}}</span><span>·</span><span>{{j.size}}</span><span>·</span><span>{{j.time}}</span></div></div>
+</div>
+</sc-for>
+</div>
+</div>
+
+<!-- Reviews -->
+<div style="height: 560px; flex-shrink: 0; background: #FFFFFF; border-top: 1px solid #E8E4DC; padding: 90px 80px 0; box-sizing: border-box; display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; justify-content: space-between; align-items: flex-end">
+<div style="display: flex; flex-direction: column; gap: 10px"><div class="mono" style="font-size: 13px; color: #1F4E96">Ý kiến khách hàng</div><h2 class="cd" style="margin: 0; font-size: 64px; line-height: .95; font-weight: 800">Khách hàng <span style="color: #1F4E96">nói gì</span></h2></div>
+</div>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; perspective: 1200px">
+<sc-for list="{{reviews}}" as="r" hint-placeholder-count="3">
+<div class="rv" style="background: #F7F6F3; border: 1px solid #E0DBD2; border-radius: 8px; padding: 28px; height: 270px; box-sizing: border-box; display: flex; flex-direction: column; gap: 16px">
+<div style="display: flex; gap: 3px"><svg viewBox="0 0 24 24" width="18" height="18"><path class="star" d="M12 2l3 6.5 7 .8-5.2 4.7 1.4 7L12 17.5 5.8 21l1.4-7L2 9.3l7-.8z"></path></svg><svg viewBox="0 0 24 24" width="18" height="18"><path class="star" d="M12 2l3 6.5 7 .8-5.2 4.7 1.4 7L12 17.5 5.8 21l1.4-7L2 9.3l7-.8z"></path></svg><svg viewBox="0 0 24 24" width="18" height="18"><path class="star" d="M12 2l3 6.5 7 .8-5.2 4.7 1.4 7L12 17.5 5.8 21l1.4-7L2 9.3l7-.8z"></path></svg><svg viewBox="0 0 24 24" width="18" height="18"><path class="star" d="M12 2l3 6.5 7 .8-5.2 4.7 1.4 7L12 17.5 5.8 21l1.4-7L2 9.3l7-.8z"></path></svg><svg viewBox="0 0 24 24" width="18" height="18"><path class="star" d="M12 2l3 6.5 7 .8-5.2 4.7 1.4 7L12 17.5 5.8 21l1.4-7L2 9.3l7-.8z"></path></svg></div>
+<div style="font-size: 16px; line-height: 1.65; flex-grow: 1">“{{r.q}}”</div>
+<div style="display: flex; align-items: center; gap: 12px; padding-top: 14px; border-top: 1px solid #E0DBD2"><div class="cd" style="width: 44px; height: 44px; border-radius: 50%; background: #1F4E96; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: 800">{{r.i}}</div><div style="display: flex; flex-direction: column"><span style="font-weight: 700">{{r.n}}</span><span style="font-size: 13px; color: #5B6472">{{r.m}}</span></div></div>
+</div>
+</sc-for>
+</div>
+</div>
+
+<!-- News -->
+<div id="tin-tuc" style="height: 580px; flex-shrink: 0; background: #FFFFFF; border-top: 1px solid #E8E4DC; padding: 90px 80px 0; box-sizing: border-box; display: flex; flex-direction: column; gap: 36px">
+<div style="display: flex; justify-content: space-between; align-items: flex-end">
+<div style="display: flex; flex-direction: column; gap: 10px"><div class="mono" style="font-size: 13px; color: #1F4E96">Kinh nghiệm sửa nhà</div><h2 class="cd" style="margin: 0; font-size: 64px; line-height: .95; font-weight: 800">Cẩm nang <span style="color: #1F4E96">cho chủ nhà</span></h2></div>
+<a href="TinTuc.dc.html" style="display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 16px">Xem tất cả bài viết<svg class="ic" viewBox="0 0 24 24" width="20" height="20"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</div>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; perspective: 1400px">
+<sc-for list="{{news}}" as="n" hint-placeholder-count="3">
+<a class="pj" href="BaiViet.dc.html" style="background: #F7F6F3; border: 1px solid #E0DBD2; border-radius: 8px; overflow: hidden; height: 330px; display: flex; flex-direction: column; color: #1B2330">
+<div class="ph" style="height: 170px; position: relative; flex-shrink: 0"><span class="mono" style="position: absolute; left: 16px; top: 16px; background: #1F4E96; color: #fff; font-size: 11px; padding: 6px 10px; border-radius: 4px">{{n.tag}}</span></div>
+<div style="padding: 18px 20px; display: flex; flex-direction: column; gap: 10px; flex-grow: 1"><div style="font-size: 18px; font-weight: 700; line-height: 1.4">{{n.t}}</div><div style="margin-top: auto; display: flex; justify-content: space-between; font-size: 13px; color: #5B6472"><span>{{n.d}}</span><span style="color: #1F4E96; font-weight: 600">Đọc tiếp →</span></div></div>
+</a>
+</sc-for>
+</div>
+</div>
+
+<!-- FAQ -->
+<div style="height: 660px; flex-shrink: 0; padding: 90px 80px 0; box-sizing: border-box; display: flex; gap: 80px">
+<div style="width: 420px; flex-shrink: 0; display: flex; flex-direction: column; gap: 16px">
+<div class="mono" style="font-size: 13px; color: #1F4E96">Câu hỏi thường gặp</div>
+<h2 class="cd" style="margin: 0; font-size: 64px; line-height: .95; font-weight: 800">Bạn hỏi, <span style="color: #1F4E96">chúng tôi trả lời</span></h2>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #5B6472">Chưa thấy câu hỏi của bạn? Gọi 0869 577 686 hoặc nhắn Zalo để được tư vấn.</p>
+</div>
+<div style="flex-grow: 1; display: flex; flex-direction: column; border-bottom: 1px solid #E0DBD2; align-self: flex-start">
+<sc-for list="{{faqs}}" as="f" hint-placeholder-count="5">
+<div>
+<button type="button" class="faq" onClick="{{f.toggle}}"><span>{{f.q}}</span><span class="cd" style="width: 36px; height: 36px; flex-shrink: 0; border-radius: 6px; background: #F1EEE8; color: #1F4E96; display: flex; align-items: center; justify-content: center; font-size: 24px">{{f.sign}}</span></button>
+<sc-if value="{{f.open}}" hint-placeholder-val="{{ false }}"><p style="margin: 0; padding: 0 60px 22px 0; font-size: 16px; line-height: 1.65; color: #5B6472">{{f.a}}</p></sc-if>
+</div>
+</sc-for>
+</div>
+</div>
+
+<!-- CTA + form -->
+<div id="lien-he" style="height: 560px; flex-shrink: 0; padding: 20px 80px 100px; box-sizing: border-box">
+<div style="height: 100%; display: flex; border-radius: 8px; overflow: hidden; border: 1px solid #1B2330">
+<div style="width: 560px; flex-shrink: 0; background: #1F4E96; color: #FFFFFF; padding: 48px; box-sizing: border-box; display: flex; flex-direction: column; justify-content: space-between">
+<div style="display: flex; flex-direction: column; gap: 16px"><div class="mono" style="font-size: 13px; color: #F9C49A">Đặt lịch khảo sát</div><h2 class="cd" style="margin: 0; font-size: 56px; line-height: .95; font-weight: 800">Nhận sửa chữa, cải tạo nhà cửa tất cả quận huyện TP.HCM</h2></div>
+<div style="display: flex; flex-direction: column; gap: 6px"><span class="mono" style="font-size: 12px; color: #D3DEEE">Gọi ngay · 7:00 – 21:00 cả tuần</span><a href="tel:0869577686" class="cd" style="color: #FFFFFF; font-size: 60px; font-weight: 800; line-height: 1">0869 577 686</a></div>
+</div>
+<div style="flex-grow: 1; background: #FFFFFF; padding: 40px 48px; box-sizing: border-box; display: flex; flex-direction: column; gap: 16px">
+<div class="cd" style="font-size: 30px; font-weight: 800">Yêu cầu báo giá</div>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px">
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 600">Họ và tên<input type="text" placeholder="Nguyễn Văn A" style="height: 46px; border: 1px solid #BDB6AA; border-radius: 6px; padding: 0 14px; font-size: 15px; background: #FAF9F6"></label>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 600">Số điện thoại<input type="tel" placeholder="09xx xxx xxx" style="height: 46px; border: 1px solid #BDB6AA; border-radius: 6px; padding: 0 14px; font-size: 15px; background: #FAF9F6"></label>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 600">Khu vực<select style="height: 46px; border: 1px solid #BDB6AA; border-radius: 6px; padding: 0 12px; font-size: 15px; background: #FAF9F6"><option>Quận 12</option><option>Gò Vấp</option><option>Tân Bình</option><option>Tân Phú</option><option>Thủ Đức</option><option>Khu vực khác</option></select></label>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 600">Hạng mục<select style="height: 46px; border: 1px solid #BDB6AA; border-radius: 6px; padding: 0 12px; font-size: 15px; background: #FAF9F6"><option>Sửa chữa, cải tạo nhà</option><option>Chống thấm</option><option>Sơn nước – Sơn dầu</option><option>Ốp lát</option><option>Trần thạch cao</option><option>Điện nước</option><option>Cửa sắt</option><option>Thông cống</option></select></label>
+</div>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 600">Mô tả tình trạng<textarea rows="3" placeholder="Ví dụ: sân thượng bị thấm xuống trần phòng ngủ…" style="border: 1px solid #BDB6AA; border-radius: 6px; padding: 12px 14px; font-size: 15px; background: #FAF9F6; resize: none"></textarea></label>
+<button type="button" class="bp" style="height: 54px; border: 0; border-radius: 6px; font-size: 17px; font-weight: 700; font-family: inherit; cursor: pointer">Gửi yêu cầu báo giá</button>
+</div>
+</div>
+</div>
+
+<!-- Footer -->
+<div style="flex-grow: 1; background: #1B2330; color: #E9EBEF; padding: 72px 80px 0; box-sizing: border-box; display: flex; flex-direction: column; gap: 40px">
+<div style="display: grid; grid-template-columns: 1.3fr 1fr 1.3fr 1fr; gap: 48px">
+<div style="display: flex; flex-direction: column; gap: 14px"><div style="display: flex; align-items: center; gap: 14px"><div style="width: 84px; height: 84px; border-radius: 10px; background: #FFFFFF; display: flex; align-items: center; justify-content: center"><svg viewBox="0 0 64 64" width="68" height="68" aria-hidden="true"><path d="M5 29L32 7l27 22" style="fill: none; stroke: #1F4E96; stroke-width: 5.5; stroke-linejoin: miter"></path><rect x="44" y="9" width="6.5" height="12" style="fill: #1F4E96"></rect><rect x="29" y="15" width="2.7" height="2.7" style="fill: #1F4E96"></rect><rect x="32.4" y="15" width="2.7" height="2.7" style="fill: #1F4E96"></rect><rect x="29" y="18.4" width="2.7" height="2.7" style="fill: #1F4E96"></rect><rect x="32.4" y="18.4" width="2.7" height="2.7" style="fill: #1F4E96"></rect><path d="M4 51Q32 69 60 45" style="fill: none; stroke: #FFFFFF; stroke-width: 6.5; stroke-linecap: round"></path><path d="M4 51Q32 69 60 45" style="fill: none; stroke: #1F4E96; stroke-width: 3; stroke-linecap: round"></path><path d="M13 57L25 26h6.5l12 31zM20.5 57L28 38l7.5 19z" style="fill: #1F4E96; fill-rule: evenodd"></path><rect x="25.3" y="47" width="2.6" height="2.6" style="fill: #1F4E96"></rect><rect x="28.6" y="47" width="2.6" height="2.6" style="fill: #1F4E96"></rect><rect x="25.3" y="50.3" width="2.6" height="2.6" style="fill: #1F4E96"></rect><rect x="28.6" y="50.3" width="2.6" height="2.6" style="fill: #1F4E96"></rect><path d="M39.5 26H49a9 9 0 0 1 0 18h-3.5v13h-6zM45.5 32v6H49a3 3 0 0 0 0-6z" style="fill: #1F4E96; fill-rule: evenodd"></path><path d="M52 36l5 5" style="fill: none; stroke: #1F4E96; stroke-width: 2.4; stroke-linecap: round"></path></svg></div><div style="display: flex; flex-direction: column; gap: 4px"><div class="brand" style="font-size: 28px; line-height: 1; color: #FFFFFF">AN GIA PHÁT</div><div class="brand" style="font-size: 10px; font-weight: 700; letter-spacing: .05em; color: #AEB7C4">SỬA CHỮA - CẢI TẠO NHÀ CỬA</div></div></div><div style="font-size: 15px; line-height: 1.6; color: #B6BCC6">Sửa chữa – Cải tạo nhà cửa. Phục vụ tận tâm – Kiến tạo tổ ấm.</div></div>
+<div style="display: flex; flex-direction: column; gap: 10px; font-size: 15px"><div class="mono" style="font-size: 12px; color: #E07A2E; margin-bottom: 6px">Dịch vụ</div><a class="lk" href="DichVu.dc.html">Sửa chữa nhà</a><a class="lk" href="DichVuChiTiet.dc.html">Chống thấm</a><a class="lk" href="DichVu.dc.html">Sơn nước – Sơn dầu</a><a class="lk" href="DichVu.dc.html">Ốp lát · Trần thạch cao</a><a class="lk" href="DichVu.dc.html">Điện nước · Cửa sắt</a><a class="lk" href="DichVu.dc.html">Thông cống</a></div>
+<div style="display: flex; flex-direction: column; gap: 10px; font-size: 15px; line-height: 1.5"><div class="mono" style="font-size: 12px; color: #E07A2E; margin-bottom: 6px">Liên hệ</div><a class="lk" href="tel:0869577686">0869 577 686</a><a class="lk" href="mailto:angiaphat.home@gmail.com">angiaphat.home@gmail.com</a><span>54/6A đường TTH 29, phường Tân Thới Hiệp, Quận 12, TP.HCM</span><span>7:00 – 21:00 (Cả tuần)</span></div>
+<div style="display: flex; flex-direction: column; gap: 10px; font-size: 15px"><div class="mono" style="font-size: 12px; color: #E07A2E; margin-bottom: 6px">Khu vực</div><span>Quận 12 · Gò Vấp</span><span>Tân Bình · Tân Phú</span><span>Thủ Đức và các khu vực lân cận</span></div>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: center; padding: 20px 0; border-top: 1px solid #333D4C; font-size: 14px; color: #B6BCC6"><span>© 2026 An Gia Phát. All rights reserved.</span><div style="display: flex; gap: 24px"><a class="lk" href="#">Facebook</a><a class="lk" href="#">Zalo</a><a class="lk" href="#">TikTok</a><a class="lk" href="#">YouTube</a></div></div>
+</div>
+<a class="bp" href="tel:0869577686" style="height: 72px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; gap: 16px"><svg class="ic" viewBox="0 0 24 24" width="24" height="24"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A17 17 0 0 1 3 5a2 2 0 0 1 2-2z"></path></svg><span class="cd" style="font-size: 30px; font-weight: 800">Hotline 0869 577 686 · <span style="color: #F9C49A">Khảo sát tận nơi</span></span></a>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"motion":{"editor":"boolean","default":true},"$preview":{"width":1440,"height":8000}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { area: 0, cat: 0, faq: 0 };
+  }
+  renderVals() {
+    const motion = this.props.motion ?? true;
+    const quotes = [
+      { n: '1', t: 'Báo giá sửa chữa nhà', s: 'Khảo sát tận nơi – tư vấn phương án' },
+      { n: '2', t: 'Báo giá chống thấm', s: 'Sân thượng, WC, tường, mái, bể nước' },
+      { n: '3', t: 'Báo giá sơn nước', s: 'Sơn trong – ngoài nhà, sơn hiệu ứng' },
+      { n: '4', t: 'Báo giá cải tạo trọn gói', s: 'Báo giá rõ ràng, không phát sinh' }
+    ];
+    const stats = [
+      { v: '10+', l: 'năm kinh nghiệm sửa chữa nhà' },
+      { v: '1.500+', l: 'công trình đã bàn giao tại TP.HCM' },
+      { v: '30+', l: 'thợ lành nghề, có tổ đội riêng' },
+      { v: '8', l: 'hạng mục thi công một đầu mối' }
+    ];
+    const services = [
+      { code: 'S-01', time: '7 – 45 ngày', t: 'Sửa chữa, cải tạo nhà', d: 'Khắc phục hư hỏng, nâng cấp, cải tạo không gian sống tiện nghi, hiện đại.', b: ['Nâng tầng, cơi nới', 'Đập thông, chia lại phòng', 'Làm mới mặt tiền'] },
+      { code: 'S-02', time: '1 – 5 ngày', t: 'Chống thấm', d: 'Sân thượng, tường, nhà vệ sinh, ban công, mái, máng, bể nước.', b: ['Khò nóng màng bitum', 'Sơn gốc PU, xi măng', 'Kiểm tra ngâm nước 48h'] },
+      { code: 'S-03', time: '3 – 10 ngày', t: 'Sơn nước – Sơn dầu', d: 'Sơn nhà, sơn lại tường trong – ngoài, sơn trang trí, chống thấm, hiệu ứng.', b: ['Xả nhám, bả matit', '1 lớp lót + 2 lớp phủ', 'Sơn dầu cửa, lan can'] },
+      { code: 'S-04', time: '2 – 7 ngày', t: 'Ốp lát', d: 'Ốp lát gạch nền, tường, nhà vệ sinh, sân — thẩm mỹ, đúng kỹ thuật.', b: ['Cán nền, tạo dốc thoát', 'Keo dán gạch chuyên dụng', 'Chà ron chống thấm'] },
+      { code: 'S-05', time: '2 – 5 ngày', t: 'Trần thạch cao', d: 'Trần trang trí, trần chìm, trần nổi. Đẹp, bền, chống ẩm, chống nóng.', b: ['Khung xương tiêu chuẩn', 'Tấm chống ẩm cho WC', 'Kết hợp đèn hắt LED'] },
+      { code: 'S-06', time: 'Trong ngày', t: 'Điện nước', d: 'Sửa chữa, lắp đặt thiết bị điện nước, thay ống, bóng đèn, thiết bị vệ sinh.', b: ['Dò tìm rò rỉ nước', 'Đi lại dây điện âm tường', 'Lắp máy bơm, bồn nước'] },
+      { code: 'S-07', time: '3 – 10 ngày', t: 'Cửa sắt', d: 'Làm mới, sửa chữa cửa sắt, cổng, hàng rào, lan can, mái che, cửa cuốn.', b: ['Gia công theo bản vẽ', 'Sơn tĩnh điện / sơn dầu', 'Mái tôn, mái kính'] }
+,
+      { code: 'S-08', time: 'Trong ngày', t: 'Thông cống', d: 'Thông tắc bồn cầu, bồn rửa, cống, hố ga, đường ống thoát nước.', b: ['Máy lò xo chuyên dụng', 'Hạn chế đục phá', 'Xử lý mùi hôi'] }
+    ];
+    const A = [
+      { name: 'Quận 12', eta: '~ 30 phút', line: 'Văn phòng chính — có thể có mặt trong khoảng 30 phút tùy lịch.', pos: 'left: 34%; top: 14%' },
+      { name: 'Gò Vấp', eta: '~ 45 phút', pos: 'left: 48%; top: 48%' },
+      { name: 'Tân Bình', eta: '~ 60 phút', pos: 'left: 30%; top: 60%' },
+      { name: 'Tân Phú', eta: '~ 60 phút', pos: 'left: 14%; top: 80%' },
+      { name: 'Thủ Đức', eta: '~ 60 phút', pos: 'left: 84%; top: 30%' }
+    ];
+    const ai = this.state.area;
+    const areas = A.map((a, i) => ({ name: a.name, eta: a.eta, pos: a.pos, on: i === ai, off: i !== ai, tabCls: i === ai ? 'tab on' : 'tab', dotCls: i === ai ? 'dot on' : 'dot', pick: () => this.setState({ area: i }) }));
+    const c0 = A[ai];
+    const cur = { name: c0.name, line: c0.line || ('Đội thợ nhận khảo sát tại ' + c0.name + ', thời gian có mặt dự kiến ' + c0.eta.replace('~ ', 'khoảng ') + ' tùy lịch.') };
+    const C = [
+      { label: 'Sửa chữa, cải tạo', rows: [['Sửa chữa nhà trọn gói', 'Khảo sát kết cấu, sửa tường, sàn, mái, hoàn thiện lại toàn bộ'], ['Cải tạo phòng, tầng', 'Đập thông, chia lại không gian, làm mới nội thất cơ bản'], ['Nâng tầng, cơi nới', 'Kiểm tra móng, gia cố kết cấu, xin phép theo quy định'], ['Khắc phục hư hỏng nhỏ', 'Nứt tường, bong tróc, lún nền, sụt trần']] },
+      { label: 'Chống thấm', rows: [['Chống thấm sân thượng', 'Vệ sinh bề mặt, xử lý cổ ống, phủ màng, ngâm nước thử'], ['Chống thấm nhà vệ sinh', 'Tháo gạch khu vực thấm, chống thấm lại, lát hoàn trả'], ['Chống thấm tường, ban công', 'Xử lý vết nứt, sơn chống thấm gốc xi măng hoặc PU'], ['Chống thấm mái, máng, bể nước', 'Khò màng bitum, xử lý mối nối, kiểm tra thoát nước']] },
+      { label: 'Sơn nước – Sơn dầu', rows: [['Sơn lại tường trong nhà', 'Che chắn nội thất, xả nhám, bả matit, 1 lót + 2 phủ'], ['Sơn ngoài nhà', 'Dựng giàn giáo, xử lý rêu mốc, sơn chống thấm ngoại thất'], ['Sơn trang trí, hiệu ứng', 'Tư vấn mẫu, thi công sơn giả đá, giả bê tông, hiệu ứng'], ['Sơn dầu cửa sắt, lan can', 'Cạo rỉ, sơn chống rỉ, sơn phủ hoàn thiện']] },
+      { label: 'Ốp lát', rows: [['Lát gạch nền', 'Cán nền, căn cốt, lát gạch, chà ron'], ['Ốp tường', 'Xử lý mặt tường, ốp bằng keo chuyên dụng'], ['Ốp lát nhà vệ sinh', 'Tạo dốc thoát sàn, chống thấm, ốp lát trọn gói'], ['Lát sân, lối đi', 'Đổ bê tông lót, lát gạch hoặc đá chống trơn']] },
+      { label: 'Trần thạch cao', rows: [['Trần chìm', 'Khung xương, tấm thạch cao, xử lý mối nối, sơn bả'], ['Trần nổi', 'Lắp khung, thả tấm, thuận tiện bảo trì'], ['Trần trang trí giật cấp', 'Thiết kế mẫu trần, kết hợp đèn hắt LED']] },
+      { label: 'Điện nước', rows: [['Sửa chữa, lắp đặt điện', 'Kiểm tra tải, đi lại dây, lắp ổ cắm, công tắc, CB'], ['Sửa đường ống nước', 'Dò tìm rò rỉ, thay ống, xử lý áp lực nước yếu'], ['Lắp đèn chiếu sáng', 'Đèn âm trần, đèn trang trí, đèn cầu thang'], ['Lắp thiết bị vệ sinh', 'Bồn cầu, lavabo, sen vòi, máy nước nóng']] },
+      { label: 'Cửa sắt', rows: [['Cửa sắt, cổng sắt', 'Đo đạc, gia công theo mẫu, sơn tĩnh điện hoặc sơn dầu'], ['Hàng rào, lan can', 'Thiết kế mẫu, gia công, lắp đặt tại chỗ'], ['Mái che tôn, mái kính', 'Khung sắt, mái tôn cách nhiệt hoặc kính cường lực'], ['Cửa cuốn', 'Lắp mới, sửa motor, thay lá cửa']] },
+      { label: 'Thông cống', rows: [['Thông tắc bồn cầu, bồn rửa', 'Máy lò xo chuyên dụng, hạn chế đục phá'], ['Thông cống, hố ga', 'Nạo vét, xử lý mùi hôi, kiểm tra độ dốc'], ['Nạo vét đường ống thoát', 'Làm sạch cặn bám, phục hồi lưu lượng thoát'], ['Hút hầm cầu', 'Xe chuyên dụng, vệ sinh sạch sẽ sau khi hút']] }
+    ];
+    const ci = this.state.cat;
+    const cats = C.map((c, i) => ({ label: c.label, cls: i === ci ? 'pill on' : 'pill', pick: () => this.setState({ cat: i }) }));
+    const rows = C[ci].rows.map((r, i) => ({ no: String(i + 1).padStart(2, '0'), item: r[0], scope: r[1], cls: i % 2 ? 'row alt' : 'row' }));
+    const steps = [
+      { n: '1', t: 'Tiếp nhận yêu cầu', d: 'Tiếp nhận thông tin, hẹn lịch khảo sát.', time: 'Trong ngày' },
+      { n: '2', t: 'Khảo sát & báo giá', d: 'Kiểm tra hiện trạng, đưa phương án và báo giá chi tiết.', time: '1 – 2 ngày' },
+      { n: '3', t: 'Ký kết thi công', d: 'Thống nhất hạng mục, tiến độ, hợp đồng.', time: 'Theo lịch hẹn' },
+      { n: '4', t: 'Thi công', d: 'Thi công đúng kỹ thuật, cập nhật tiến độ hằng ngày.', time: 'Tùy hạng mục' },
+      { n: '5', t: 'Nghiệm thu', d: 'Kiểm tra cùng chủ nhà, bàn giao công trình.', time: 'Khi hoàn thành' },
+      { n: '6', t: 'Bảo hành', d: 'Bảo hành theo hợp đồng, hỗ trợ nhanh chóng.', time: 'Theo hạng mục' }
+    ];
+    const projects = [
+      { cat: 'Cải tạo', name: 'Cải tạo nhà phố 3 tầng', area: 'Gò Vấp', size: '4 × 16 m', time: '~ 35 ngày' },
+      { cat: 'Chống thấm', name: 'Chống thấm sân thượng', area: 'Quận 12', size: '60 m²', time: '3 ngày' },
+      { cat: 'Sơn nước', name: 'Sơn mới nhà phố 2 mặt tiền', area: 'Thủ Đức', size: '420 m² sơn', time: '9 ngày' },
+      { cat: 'Trần thạch cao', name: 'Trần giật cấp phòng khách', area: 'Tân Bình', size: '38 m²', time: '4 ngày' },
+      { cat: 'Cửa sắt', name: 'Cổng & lan can sắt mỹ thuật', area: 'Tân Phú', size: '22 m dài', time: '6 ngày' },
+      { cat: 'Ốp lát · Điện nước', name: 'Làm mới 2 nhà vệ sinh', area: 'Quận 12', size: '2 × 5 m²', time: '5 ngày' }
+    ];
+    const reviews = [
+      { q: 'Sân thượng thấm mấy năm, gọi buổi sáng thì chiều có người qua xem. Làm xong ngâm nước thử cho mình coi, mùa mưa vừa rồi không còn thấm.', i: 'H', n: 'Chị Thu Hà', m: 'Chống thấm · Quận 12' },
+      { q: 'Báo giá chi tiết từng hạng mục nên dễ so sánh. Thợ làm gọn, cuối ngày dọn dẹp sạch sẽ, nhà vẫn ở được trong lúc sửa.', i: 'B', n: 'Anh Quốc Bảo', m: 'Cải tạo nhà · Gò Vấp' },
+      { q: 'Trần thạch cao và đèn hắt làm đẹp hơn mình tưởng. Có vài chỗ muốn chỉnh lại, đội thợ quay lại sửa ngay không phàn nàn.', i: 'L', n: 'Cô Mỹ Lan', m: 'Trần thạch cao · Tân Bình' }
+    ];
+    const F = [
+      ['Khảo sát và báo giá có mất phí không?', 'Với phần lớn khu vực nội thành TP.HCM, An Gia Phát hỗ trợ khảo sát tận nơi. Nếu có chi phí phát sinh cho việc khảo sát, nhân viên sẽ thông báo rõ khi bạn đặt lịch.'],
+      ['Bao lâu thì thợ có mặt?', 'Tùy lịch và khu vực, thường trong ngày hoặc ngày hôm sau. Các sự cố gấp như rò rỉ nước, chập điện sẽ được ưu tiên sắp xếp sớm nhất có thể.'],
+      ['Làm sao để nhận báo giá chính xác?', 'Bạn gọi hotline hoặc gửi ảnh hiện trạng qua Zalo. Kỹ thuật viên sẽ hẹn lịch khảo sát, đo đạc thực tế và gửi báo giá chi tiết từng hạng mục bằng văn bản.'],
+      ['Thời gian bảo hành bao lâu?', 'Thời gian bảo hành khác nhau theo từng hạng mục và được ghi cụ thể trong hợp đồng thi công.'],
+      ['Có phải dọn nhà khi thi công không?', 'Tùy hạng mục. Đội thợ sẽ tư vấn phương án che chắn và thi công theo từng khu vực để gia đình vẫn có thể sinh hoạt.']
+    ];
+    const fi = this.state.faq;
+    const faqs = F.map((f, i) => ({ q: f[0], a: f[1], open: i === fi, sign: i === fi ? '–' : '+', toggle: () => this.setState({ faq: i === fi ? -1 : i }) }));
+    const news = [
+      { tag: 'Chống thấm', t: '5 dấu hiệu sân thượng đang thấm và cách xử lý trước mùa mưa', d: '09/2026' },
+      { tag: 'Báo giá', t: 'Sửa nhà trọn gói gồm những hạng mục nào? Cách đọc một bảng báo giá', d: '09/2026' },
+      { tag: 'Sơn nước', t: 'Chọn sơn nội thất cho nhà phố TP.HCM: những điều cần lưu ý', d: '08/2026' }
+    ];
+    return { rootClass: motion ? 'vb anim' : 'vb', quotes, stats, services, areas, cur, cats, rows, steps, projects, reviews, faqs, news };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,195 @@
+/* CSS 3D cục bộ của trang chủ: khối lập phương hero + sơ đồ khu vực */
+
+/* ---------- Hero cube ---------- */
+.cstage {
+  perspective: 1500px;
+  perspective-origin: 50% 40%;
+}
+.bobLayer {
+  position: absolute;
+  inset: 0;
+  transform-style: preserve-3d;
+}
+.cube {
+  position: absolute;
+  left: 50%;
+  top: 46%;
+  width: 0;
+  height: 0;
+  transform-style: preserve-3d;
+  transform: rotateX(-18deg) rotateY(32deg);
+  animation: cubespin 22s linear infinite;
+}
+.cf {
+  position: absolute;
+  left: -150px;
+  top: -150px;
+  width: 300px;
+  height: 300px;
+  box-sizing: border-box;
+  border: 2px solid var(--color-ink);
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  backface-visibility: hidden;
+}
+.light {
+  background: var(--color-paper);
+  color: var(--color-ink);
+}
+.brand {
+  background: var(--color-brand);
+  color: #fff;
+}
+.dark {
+  background: var(--color-ink);
+  color: #fff;
+}
+
+@keyframes cubespin {
+  from {
+    transform: rotateX(-18deg) rotateY(0deg);
+  }
+  to {
+    transform: rotateX(-18deg) rotateY(360deg);
+  }
+}
+
+/* ---------- Map plane ---------- */
+.mstage {
+  perspective: 1300px;
+}
+.plane {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 540px;
+  height: 400px;
+  margin-left: -270px;
+  margin-top: -200px;
+  transform-style: preserve-3d;
+  transform: rotateX(58deg) rotateZ(-28deg);
+  background-color: var(--color-paper);
+  background-image: linear-gradient(rgba(31, 78, 150, 0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(31, 78, 150, 0.12) 1px, transparent 1px);
+  background-size: 27px 27px;
+  border: 2px solid var(--color-ink);
+  box-shadow: 0 60px 60px -30px rgba(10, 26, 58, 0.4);
+}
+.road {
+  position: absolute;
+  background: #ddd7cc;
+}
+.blk {
+  position: absolute;
+  background: var(--color-line-soft);
+  border: 1px solid var(--color-line-strong);
+}
+.river {
+  position: absolute;
+  background: var(--color-fog);
+}
+.dot {
+  position: absolute;
+  width: 0;
+  height: 0;
+  transform-style: preserve-3d;
+}
+.pt {
+  position: absolute;
+  left: -7px;
+  top: -7px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--color-ink);
+  border: 2px solid var(--color-paper);
+  transition: all 0.25s;
+}
+.dotOn .pt {
+  background: var(--color-brand);
+  left: -9px;
+  top: -9px;
+  width: 18px;
+  height: 18px;
+}
+.lb {
+  position: absolute;
+  left: 14px;
+  top: -9px;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+  color: var(--color-ink);
+}
+.beam {
+  position: absolute;
+  left: -2px;
+  bottom: 0;
+  width: 4px;
+  height: 110px;
+  background: var(--color-brand);
+  transform-origin: 50% 100%;
+  transform: rotateZ(28deg) rotateX(-90deg);
+  transform-style: preserve-3d;
+}
+.flag {
+  position: absolute;
+  left: -10px;
+  top: -44px;
+  background: var(--color-brand);
+  color: #fff;
+  font-weight: 700;
+  font-size: 15px;
+  padding: 8px 14px;
+  border-radius: 6px;
+  white-space: nowrap;
+}
+.halo {
+  position: absolute;
+  left: -40px;
+  top: -40px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid var(--color-brand);
+  animation: halo 2s ease-out infinite;
+}
+@keyframes halo {
+  from {
+    transform: scale(0.3);
+    opacity: 1;
+  }
+  to {
+    transform: scale(1.4);
+    opacity: 0;
+  }
+}
+
+/* Thu nhỏ sơ đồ trên màn hình hẹp để không tràn ngang */
+.mapScale {
+  position: absolute;
+  inset: 0;
+  transform: scale(0.62);
+}
+@media (min-width: 640px) {
+  .mapScale {
+    transform: scale(0.85);
+  }
+}
+@media (min-width: 1280px) {
+  .mapScale {
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cube,
+  .halo {
+    animation: none;
+  }
+  .pt {
+    transition: none;
+  }
+}

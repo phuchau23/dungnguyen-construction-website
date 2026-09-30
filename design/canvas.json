@@ -1,0 +1,151 @@
+{
+  "v": 3,
+  "attachments": {},
+  "boards": {
+    "BaiViet.dc.html": {
+      "h": 3740,
+      "page": "ui",
+      "title": "Bài viết",
+      "w": 1440,
+      "x": 12630,
+      "y": 0
+    },
+    "BaoGia.dc.html": {
+      "h": 2180,
+      "is_interactive": true,
+      "page": "ui",
+      "title": "Yêu cầu báo giá (3 bước)",
+      "w": 1440,
+      "x": 6550,
+      "y": 0
+    },
+    "CongTrinh.dc.html": {
+      "h": 2800,
+      "is_interactive": true,
+      "page": "ui",
+      "title": "Công trình",
+      "w": 1440,
+      "x": 8070,
+      "y": 0
+    },
+    "CongTrinhChiTiet.dc.html": {
+      "h": 3960,
+      "page": "ui",
+      "title": "Chi tiết công trình",
+      "w": 1440,
+      "x": 9590,
+      "y": 0
+    },
+    "DichVu.dc.html": {
+      "h": 3180,
+      "page": "ui",
+      "title": "Dịch vụ",
+      "w": 1440,
+      "x": 3510,
+      "y": 0
+    },
+    "DichVuChiTiet.dc.html": {
+      "h": 4710,
+      "is_interactive": true,
+      "page": "ui",
+      "title": "Chi tiết dịch vụ – Chống thấm",
+      "w": 1440,
+      "x": 5030,
+      "y": 0
+    },
+    "GioiThieu.dc.html": {
+      "h": 3680,
+      "page": "ui",
+      "title": "Giới thiệu",
+      "w": 1440,
+      "x": 1990,
+      "y": 0
+    },
+    "LienHe.dc.html": {
+      "h": 2300,
+      "page": "ui",
+      "title": "Liên hệ",
+      "w": 1440,
+      "x": 14150,
+      "y": 0
+    },
+    "Logo.dc.html": {
+      "h": 1560,
+      "page": "logo",
+      "title": "Logo An Gia Phát – bản xanh",
+      "w": 1200,
+      "x": 0,
+      "y": 0
+    },
+    "PhuongAnB.dc.html": {
+      "h": 8000,
+      "is_interactive": true,
+      "page": "ui",
+      "title": "Trang chủ",
+      "w": 1440,
+      "x": 0,
+      "y": 0
+    },
+    "TinTuc.dc.html": {
+      "h": 3130,
+      "page": "ui",
+      "title": "Tin tức",
+      "w": 1440,
+      "x": 11110,
+      "y": 0
+    },
+    "TrangChuMobile.dc.html": {
+      "h": 3744,
+      "page": "ui",
+      "title": "Trang chủ – Mobile",
+      "w": 390,
+      "x": 1520,
+      "y": 0
+    }
+  },
+  "createdOnFiles": {
+    "at": "2026-09-28T09:00:00Z",
+    "v": 1
+  },
+  "designSystems": [],
+  "launch": {
+    "page": "ui",
+    "view": "canvas"
+  },
+  "notes": {
+    "uiTitle": {
+      "kind": "title1",
+      "maxW": 8000,
+      "page": "ui",
+      "text": "Bộ UI An Gia Phát – Phương án B",
+      "w": 240,
+      "x": 0,
+      "y": -300
+    }
+  },
+  "order": [
+    "Logo.dc.html",
+    "PhuongAnB.dc.html",
+    "TrangChuMobile.dc.html",
+    "GioiThieu.dc.html",
+    "DichVu.dc.html",
+    "DichVuChiTiet.dc.html",
+    "BaoGia.dc.html",
+    "CongTrinh.dc.html",
+    "CongTrinhChiTiet.dc.html",
+    "TinTuc.dc.html",
+    "BaiViet.dc.html",
+    "LienHe.dc.html"
+  ],
+  "pages": [
+    {
+      "id": "ui",
+      "name": "Bộ UI – Phương án B"
+    },
+    {
+      "id": "logo",
+      "name": "Logo"
+    }
+  ],
+  "title": "An Gia Phát – Giới thiệu công ty"
+}
