@@ -198,7 +198,7 @@ export const serviceDetails: ServiceDetail[] = [
       title: "Vì sao sơn nhanh xuống cấp?",
       text: "Tường bị phấn hóa, bong tróc hay ố mốc thường không do sơn kém mà do bề mặt chưa được xử lý: tường còn ẩm, chưa xả nhám, bả matit không đều hoặc bỏ qua lớp sơn lót. Với mặt ngoài, nắng mưa và rêu mốc làm sơn xuống cấp nhanh hơn nếu không dùng sơn ngoại thất phù hợp. Làm đúng quy trình từ bước xử lý nền giúp lớp sơn giữ màu lâu.",
       image: "[Ảnh thi công sơn nhà phố]",
-      src: "/sua-nha-tron-goi/1790744682346_751968165130597158_751968165130597158_c942ff0d0abc307144bb9a7ade29a9b9.jpg",
+      src: "/sua-nha-tron-goi/1790786750145_751968165130597158_751968165130597158_b7ef394052aeec8638875b4d20d072a5.jpg",
     },
     signs: {
       title: "6 dấu hiệu nên sơn lại nhà",

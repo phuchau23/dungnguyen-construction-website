@@ -170,7 +170,7 @@ export const articles: Article[] = [
   },
   {
     slug: "chon-son-noi-that-nha-pho-tphcm",
-    image: "/sua-nha-tron-goi/1790744682346_751968165130597158_751968165130597158_c942ff0d0abc307144bb9a7ade29a9b9.jpg",
+    image: "/sua-nha-tron-goi/1790786750145_751968165130597158_751968165130597158_b7ef394052aeec8638875b4d20d072a5.jpg",
     tag: "Sơn nước",
     tagSlug: "son-nuoc",
     title: "Chọn sơn nội thất cho nhà phố TP.HCM: những điều cần lưu ý",
