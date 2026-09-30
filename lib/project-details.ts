@@ -122,7 +122,7 @@ export const projectDetails: ProjectDetail[] = [
       { src: "/sua-nha-tron-goi/1790744682352_751968165130597158_751968165130597158_b539ef539a02597805688cdf55e3189f.jpg", caption: "Trát vữa hoàn thiện mảng tường vòm cầu thang" },
       { src: "/sua-nha-tron-goi/1790744682344_751968165130597158_751968165130597158_89fd8a72872b666cdca46240d42bad12.jpg", caption: "Thi công trong nhà: giàn giáo, vật tư bột trét, sơn" },
       { src: "/sua-nha-tron-goi/1790744682348_751968165130597158_751968165130597158_b8be12c85b9337b6d3d597baca6ece05.jpg", caption: "Bả matit tường trước khi sơn" },
-      { src: "/sua-nha-tron-goi/1790744682346_751968165130597158_751968165130597158_c942ff0d0abc307144bb9a7ade29a9b9.jpg", caption: "Sơn trần trên giàn giáo" },
+      { src: "/sua-nha-tron-goi/1790786750145_751968165130597158_751968165130597158_b7ef394052aeec8638875b4d20d072a5.jpg", caption: "Sơn trần trên giàn giáo" },
       { src: "/sua-nha-tron-goi/1790744682320_751968165130597158_751968165130597158_2001891f282f26028eb9099ba70fd79d.jpg", caption: "Mặt tiền nhìn từ dưới lên, tầng trệt kinh doanh" },
     ],
     cat: "Cải tạo",
