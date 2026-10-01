@@ -1,15 +1,16 @@
 import type { Metadata } from "next";
-import { pageMeta } from "@/lib/seo";
+import { faqJsonLd, pageMeta } from "@/lib/seo";
 import Image from "next/image";
 import Link from "next/link";
 import { Icon, Star } from "@/components/Icon";
+import { JsonLd } from "@/components/JsonLd";
 import { Container, Hl, Placeholder, SectionHead } from "@/components/ui";
 import { posts, projects, reviews, services, stats } from "@/lib/data";
 import { articles } from "@/lib/posts";
 import { site } from "@/lib/site";
 import { AreaMap } from "./_home/AreaMap";
 import { Faq } from "./_home/Faq";
-import { quotes } from "./_home/data";
+import { faqs, quotes } from "./_home/data";
 
 export const metadata: Metadata = pageMeta({
   title: "Duy Long Home – Sửa chữa nhà trọn gói TP.HCM",
@@ -494,6 +495,7 @@ function News() {
 function FaqSection() {
   return (
     <section className="py-10 lg:pb-[70px] lg:pt-[90px]">
+      <JsonLd data={faqJsonLd(faqs)} />
       <Container className="flex flex-col gap-6 lg:flex-row lg:gap-20">
         <div className="flex flex-col gap-4 lg:w-[420px] lg:shrink-0">
           <div className="mono text-[11px] text-brand lg:text-[13px]">Câu hỏi thường gặp</div>
