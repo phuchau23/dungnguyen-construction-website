@@ -136,6 +136,18 @@ const businessJsonLd = {
   sameAs: [site.facebookHref, site.zaloHref],
 };
 
+/** Tên website: Google hiện "Duy Long Home" thay cho tên miền ở dòng trên tiêu đề kết quả tìm kiếm */
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": `${site.url}/#website`,
+  name: site.name,
+  alternateName: ["DuyLongHome", "duylonghome.com.vn"],
+  url: `${site.url}/`,
+  inLanguage: "vi",
+  publisher: { "@id": `${site.url}/#business` },
+};
+
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
@@ -143,6 +155,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${vietnam.variable} ${barlow.variable} ${jetbrains.variable} ${montserrat.variable} ${dancing.variable} antialiased`}
     >
       <body className="flex min-h-screen flex-col">
+        <JsonLd data={websiteJsonLd} />
         <JsonLd data={businessJsonLd} />
         <Header />
         <main className="grow">{children}</main>
