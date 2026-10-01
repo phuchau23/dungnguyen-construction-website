@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import { pageMeta } from "@/lib/seo";
+import { faqJsonLd, pageMeta } from "@/lib/seo";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Icon } from "@/components/Icon";
+import { JsonLd } from "@/components/JsonLd";
 import { Container, CtaBanner, Hl, PageHero, Placeholder, QuickContactCard, SectionHead, ZaloCard } from "@/components/ui";
 import { services } from "@/lib/data";
 import { getServiceDetail, serviceDetails } from "@/lib/service-details";
@@ -44,8 +45,22 @@ export default async function DichVuChiTietPage({ params }: Props) {
 
   const others = services.filter((s) => s.slug !== slug);
 
+  const serviceJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: service.title,
+    serviceType: service.title,
+    description: detail.lead,
+    url: `${site.url}/dich-vu/${slug}`,
+    ...(detail.intro.src ? { image: `${site.url}${detail.intro.src}` } : {}),
+    provider: { "@id": `${site.url}/#business` },
+    areaServed: [...site.areas, "TP. Hồ Chí Minh"].map((name) => ({ "@type": "Place", name })),
+  };
+
   return (
     <>
+      <JsonLd data={serviceJsonLd} />
+      <JsonLd data={faqJsonLd(detail.faq.items)} />
       <PageHero
         crumbs={[
           { href: "/", label: "Trang chủ" },

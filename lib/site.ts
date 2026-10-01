@@ -1,11 +1,11 @@
 /**
  * Tên miền chính thức — dùng cho canonical, sitemap, ảnh chia sẻ (Open Graph).
- * Đặt biến môi trường NEXT_PUBLIC_SITE_URL (vd. https://duylonghome.vn) khi deploy.
+ * Bản build production luôn dùng tên miền này (không dùng *.vercel.app để Google không lập chỉ mục trùng).
+ * NEXT_PUBLIC_SITE_URL chỉ để ghi đè khi cần thử trên tên miền khác.
  */
 const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL ||
-  (process.env.VERCEL_PROJECT_PRODUCTION_URL ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}` : "") ||
-  "http://localhost:3000";
+  (process.env.NODE_ENV === "production" ? "https://www.duylonghome.com.vn" : "http://localhost:3000");
 
 export const site = {
   name: "Duy Long Home",
