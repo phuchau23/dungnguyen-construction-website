@@ -48,7 +48,7 @@ export default function Home() {
 function Hero() {
   return (
     <section className="relative flex min-h-[calc(100svh-68px)] items-center justify-center overflow-hidden bg-ink lg:min-h-[calc(100svh-172px)]">
-      <Image src="/chong-tham/1790684753141_751968165130597158_751968165130597158_83740481b7ef5b7a0193644f814f1f69.jpg" alt="" fill preload sizes="100vw" className="object-cover" />
+      <Image src="/chong-tham/1790684753141_751968165130597158_751968165130597158_83740481b7ef5b7a0193644f814f1f69.jpg" alt="Thợ Duy Long Home thi công chống thấm sân thượng nhà phố tại TP.HCM" fill preload sizes="100vw" className="object-cover" />
       <div className="absolute inset-0 bg-black/55" aria-hidden="true" />
       <Container className="relative flex flex-col items-center gap-[18px] py-16 text-center text-white lg:gap-[26px] lg:pb-[130px] lg:pt-20">
         <div className="mono flex items-center gap-3 text-[11px] text-peach lg:text-[13px]">
