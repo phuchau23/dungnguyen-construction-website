@@ -12,6 +12,7 @@ import { Footer, MobileContactBar } from "@/components/Footer";
 import { ZaloWidget } from "@/components/ZaloWidget";
 import { defaultOgImage } from "@/lib/seo";
 import { site } from "@/lib/site";
+import { officePos } from "./_home/data";
 import "./globals.css";
 
 const vietnam = Be_Vietnam_Pro({
@@ -74,6 +75,10 @@ export const metadata: Metadata = {
   publisher: site.name,
   category: "Sửa chữa, cải tạo nhà",
   formatDetection: { telephone: false, email: false, address: false },
+  // Mã xác minh Google Search Console (cách "Thẻ HTML"). Không cần nếu đã xác minh bằng DNS.
+  ...(process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
+    ? { verification: { google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION } }
+    : {}),
   alternates: { canonical: "/" },
   robots: {
     index: true,
@@ -117,6 +122,8 @@ const businessJsonLd = {
     addressRegion: "TP. Hồ Chí Minh",
     addressCountry: "VN",
   },
+  geo: { "@type": "GeoCoordinates", latitude: officePos[0], longitude: officePos[1] },
+  hasMap: `https://www.google.com/maps?q=${officePos[0]},${officePos[1]}`,
   openingHoursSpecification: [
     {
       "@type": "OpeningHoursSpecification",

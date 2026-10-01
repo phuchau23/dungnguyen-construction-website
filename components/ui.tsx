@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { Icon } from "./Icon";
+import { JsonLd } from "./JsonLd";
 import { site } from "@/lib/site";
 
 /** Khung nội dung chuẩn: tối đa 1440px, lề 80px desktop / 20px mobile */
@@ -75,8 +76,20 @@ export function PageHero({
 }
 
 export function Breadcrumbs({ crumbs }: { crumbs: Crumb[] }) {
+  // Dữ liệu cấu trúc BreadcrumbList: Google hiện đường dẫn "Trang chủ › Dịch vụ › ..." thay cho URL trong kết quả tìm kiếm
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: crumbs.map((c, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: c.label,
+      ...(c.href ? { item: `${site.url}${c.href === "/" ? "" : c.href}` } : {}),
+    })),
+  };
   return (
     <nav aria-label="Breadcrumb" className="flex flex-wrap items-center gap-2 text-sm">
+      <JsonLd data={breadcrumbJsonLd} />
       {crumbs.map((c, i) => (
         <span key={i} className="flex items-center gap-2">
           {i > 0 && <span className="text-line-strong">/</span>}

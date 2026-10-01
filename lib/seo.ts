@@ -43,3 +43,16 @@ export function pageMeta({ title, description, path, image, imageAlt, absoluteTi
     },
   };
 }
+
+/** Dữ liệu cấu trúc FAQPage từ danh sách hỏi đáp hiển thị trên trang */
+export function faqJsonLd(items: { q: string; a: string }[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: items.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
+}
