@@ -25,6 +25,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return pageMeta({
     title: `${detail.title} ${detail.titleHl}`,
     description: detail.lead,
+    keywords: detail.keywords,
     path: `/dich-vu/${slug}`,
     image: detail.intro.src,
     imageAlt: `${detail.title} – ${site.name}`,

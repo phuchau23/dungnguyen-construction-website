@@ -8,6 +8,7 @@ export const metadata: Metadata = pageMeta({
   title: "Báo giá sửa chữa nhà qua Zalo",
   description:
     "Nhận báo giá sửa chữa, cải tạo nhà qua Zalo: gửi ảnh hiện trạng, kỹ thuật viên Duy Long Home tư vấn, hẹn lịch khảo sát và gửi báo giá chi tiết bằng văn bản.",
+  keywords: ["báo giá sửa nhà", "giá sửa nhà trọn gói", "chi phí cải tạo nhà", "báo giá chống thấm", "báo giá sơn nhà", "báo giá sửa chữa nhà TP.HCM"],
   path: "/bao-gia",
 });
 

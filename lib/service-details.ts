@@ -7,6 +7,8 @@
 
 export type ServiceDetail = {
   slug: string;
+  /** Từ khóa SEO của trang (thẻ meta keywords) */
+  keywords: string[];
   /** H1: phần chữ thường + phần tô màu thương hiệu */
   title: string;
   titleHl: string;
@@ -31,6 +33,7 @@ const warranty = (what: string) => ({
 export const serviceDetails: ServiceDetail[] = [
   {
     slug: "sua-chua-cai-tao-nha",
+    keywords: ["sửa chữa nhà", "sửa nhà trọn gói", "cải tạo nhà", "cải tạo nhà cũ", "sửa chữa nhà TP.HCM", "sửa nhà Quận 12", "sửa nhà Gò Vấp", "thợ sửa nhà"],
     title: "Sửa chữa, cải tạo",
     titleHl: "nhà ở TP.HCM",
     lead: "Khắc phục hư hỏng, nâng tầng, cơi nới, đập thông, chia lại phòng và làm mới mặt tiền — kiểm tra hiện trạng, kết cấu trước khi đưa phương án.",
@@ -111,6 +114,7 @@ export const serviceDetails: ServiceDetail[] = [
   },
   {
     slug: "chong-tham",
+    keywords: ["chống thấm", "chống thấm sân thượng", "chống thấm tường", "chống thấm nhà vệ sinh", "chống thấm tường giáp ranh", "xử lý thấm dột", "chống thấm Quận 12", "chống thấm TP.HCM"],
     title: "Chống thấm",
     titleHl: "nhà ở TP.HCM",
     lead: "Xử lý thấm sân thượng, nhà vệ sinh, tường, ban công, mái, máng và bể nước — tìm đúng nguyên nhân trước khi xử lý.",
@@ -191,6 +195,7 @@ export const serviceDetails: ServiceDetail[] = [
   },
   {
     slug: "son-nuoc-son-dau",
+    keywords: ["sơn nhà", "thợ sơn nhà", "sơn lại nhà cũ", "sơn nước", "sơn dầu", "sơn nhà trọn gói", "sơn nhà Quận 12", "sơn nhà TP.HCM"],
     title: "Sơn nước – Sơn dầu",
     titleHl: "trong & ngoài nhà",
     lead: "Sơn lại tường trong – ngoài nhà, sơn trang trí, hiệu ứng và sơn dầu cửa sắt, lan can — xử lý bề mặt kỹ trước khi sơn để màu bền, không bong tróc.",
@@ -271,6 +276,7 @@ export const serviceDetails: ServiceDetail[] = [
   },
   {
     slug: "op-lat",
+    keywords: ["ốp lát gạch", "thợ lát gạch", "lát nền nhà", "thay gạch nền", "ốp gạch nhà vệ sinh", "ốp lam sóng", "ốp lát TP.HCM"],
     title: "Ốp lát gạch",
     titleHl: "nền, tường, sân",
     lead: "Ốp lát gạch nền, tường, nhà vệ sinh, sân và lối đi — cán nền đúng cốt, tạo dốc thoát nước, dùng keo dán chuyên dụng cho mặt gạch phẳng, bền.",
@@ -351,6 +357,7 @@ export const serviceDetails: ServiceDetail[] = [
   },
   {
     slug: "tran-thach-cao",
+    keywords: ["trần thạch cao", "làm trần thạch cao", "trần chìm", "trần nổi", "sửa trần thạch cao", "trần thạch cao TP.HCM"],
     title: "Trần thạch cao",
     titleHl: "chìm, nổi, giật cấp",
     lead: "Thi công trần chìm, trần nổi, trần trang trí giật cấp kết hợp đèn hắt LED — khung xương tiêu chuẩn, tấm chống ẩm cho khu vực nhà vệ sinh.",
@@ -430,6 +437,7 @@ export const serviceDetails: ServiceDetail[] = [
   },
   {
     slug: "dien-nuoc",
+    keywords: ["sửa điện nước", "thợ điện nước", "sửa ống nước", "sửa điện tại nhà", "điện nước Quận 12", "sửa điện nước TP.HCM"],
     title: "Sửa chữa điện nước",
     titleHl: "tận nơi",
     lead: "Sửa chữa, lắp đặt điện nước: dò tìm rò rỉ, thay ống, đi lại dây điện âm tường, lắp đèn, máy bơm, bồn nước và thiết bị vệ sinh.",
@@ -510,6 +518,7 @@ export const serviceDetails: ServiceDetail[] = [
   },
   {
     slug: "cua-sat",
+    keywords: ["làm cửa sắt", "cửa sắt mỹ thuật", "sửa cửa sắt", "sơn cửa sắt", "cửa cổng sắt", "cửa sắt TP.HCM"],
     title: "Cửa sắt, cổng",
     titleHl: "lan can, mái che",
     lead: "Làm mới, sửa chữa cửa sắt, cổng, hàng rào, lan can, mái che và cửa cuốn — đo đạc tận nơi, gia công theo bản vẽ, sơn tĩnh điện hoặc sơn dầu.",
@@ -590,6 +599,7 @@ export const serviceDetails: ServiceDetail[] = [
   },
   {
     slug: "dien-lanh",
+    keywords: ["sửa máy lạnh", "vệ sinh máy lạnh", "máy lạnh chảy nước", "máy lạnh kém lạnh", "sửa máy lạnh Quận 12", "điện lạnh TP.HCM"],
     title: "Điện lạnh",
     titleHl: "sửa chữa tận nơi",
     lead: "Vệ sinh, bơm gas, sửa chữa và tháo lắp máy lạnh; sửa tủ lạnh, máy giặt, máy nước nóng tại nhà — kiểm tra tận nơi, báo giá trước khi làm.",
