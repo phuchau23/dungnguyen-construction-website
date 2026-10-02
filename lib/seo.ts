@@ -8,6 +8,8 @@ type PageMetaInput = {
   /** Tiêu đề trang (ghép với "| Duy Long Home" qua template ở layout) */
   title: string;
   description: string;
+  /** Từ khóa riêng của trang (thẻ meta keywords); không có thì dùng bộ chung ở layout */
+  keywords?: string[];
   /** Đường dẫn trang, vd. "/dich-vu/chong-tham" */
   path: string;
   /** Ảnh chia sẻ trong /public; không có thì dùng ảnh mặc định */
@@ -19,12 +21,13 @@ type PageMetaInput = {
 };
 
 /** Metadata đầy đủ cho một trang: title, description, canonical, Open Graph, Twitter */
-export function pageMeta({ title, description, path, image, imageAlt, absoluteTitle, type = "website" }: PageMetaInput): Metadata {
+export function pageMeta({ title, description, keywords, path, image, imageAlt, absoluteTitle, type = "website" }: PageMetaInput): Metadata {
   const images = image ? [{ url: image, alt: imageAlt ?? title }] : [defaultOgImage];
   const shareTitle = absoluteTitle ? title : `${title} | ${site.name}`;
   return {
     title: absoluteTitle ? { absolute: title } : title,
     description,
+    ...(keywords?.length ? { keywords } : {}),
     alternates: { canonical: path },
     openGraph: {
       type,
