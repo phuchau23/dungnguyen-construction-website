@@ -75,10 +75,14 @@ export const metadata: Metadata = {
   publisher: site.name,
   category: "Sửa chữa, cải tạo nhà",
   formatDetection: { telephone: false, email: false, address: false },
-  // Mã xác minh Google Search Console (cách "Thẻ HTML"). Không cần nếu đã xác minh bằng DNS.
-  ...(process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
-    ? { verification: { google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION } }
-    : {}),
+  // Mã xác minh Google Search Console / Bing Webmaster Tools (cách "Thẻ HTML"). Không cần nếu đã xác minh bằng DNS
+  // hoặc đã nhập site từ Google Search Console sang Bing.
+  verification: {
+    ...(process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION ? { google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION } : {}),
+    ...(process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION
+      ? { other: { "msvalidate.01": process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION } }
+      : {}),
+  },
   alternates: { canonical: "/" },
   robots: {
     index: true,
