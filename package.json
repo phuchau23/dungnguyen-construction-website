@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
+    "indexnow": "node scripts/indexnow.mjs",
     "postinstall": "node -e \"for(const f of ['worker','shared'])require('fs').cpSync('node_modules/maplibre-gl/dist/maplibre-gl-'+f+'.mjs','public/maplibre/maplibre-gl-'+f+'.mjs')\""
   },
   "dependencies": {
