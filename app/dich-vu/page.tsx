@@ -10,6 +10,7 @@ export const metadata: Metadata = pageMeta({
   title: "Dịch vụ sửa chữa nhà TP.HCM",
   description:
     "8 hạng mục sửa chữa nhà tại TP.HCM: sửa chữa cải tạo, chống thấm, sơn nước, ốp lát, trần thạch cao, điện nước, cửa sắt, điện lạnh. Khảo sát tận nơi, báo giá chi tiết trước khi thi công.",
+  keywords: ["dịch vụ sửa chữa nhà", "sửa chữa nhà TP.HCM", "chống thấm", "sơn nhà", "ốp lát gạch", "trần thạch cao", "sửa điện nước", "làm cửa sắt", "sửa máy lạnh"],
   path: "/dich-vu",
   image: "/sua-nha-tron-goi/1790744682344_751968165130597158_751968165130597158_89fd8a72872b666cdca46240d42bad12.jpg",
   imageAlt: "Đội thợ thi công sửa chữa nhà",

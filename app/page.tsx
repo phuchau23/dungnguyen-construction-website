@@ -16,6 +16,7 @@ export const metadata: Metadata = pageMeta({
   title: "Duy Long Home – Sửa chữa nhà trọn gói TP.HCM",
   description:
     "Sửa chữa, cải tạo nhà trọn gói tại TP.HCM: chống thấm, sơn nước, ốp lát, trần thạch cao, điện nước, cửa sắt, điện lạnh. Khảo sát tận nơi, báo giá rõ ràng, bảo hành dài hạn. Hotline 0869 577 686.",
+  keywords: ["sửa chữa nhà", "sửa nhà trọn gói", "cải tạo nhà", "sửa chữa nhà TP.HCM", "sửa nhà Quận 12", "sửa nhà Gò Vấp", "chống thấm", "sơn nhà", "trần thạch cao", "sửa điện nước", "Duy Long Home"],
   path: "/",
   absoluteTitle: true,
 });
