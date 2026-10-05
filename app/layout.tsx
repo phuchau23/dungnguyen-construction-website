@@ -46,7 +46,7 @@ const dancing = Dancing_Script({
 });
 
 const description =
-  "Sửa chữa nhà trọn gói TP.HCM: chống thấm, sơn nước, ốp lát, trần thạch cao, điện nước, cửa sắt, điện lạnh. Khảo sát tận nơi, báo giá rõ ràng. Hotline 0869 577 686.";
+  "Sửa chữa nhà trọn gói TP.HCM: chống thấm, sơn nước, ốp lát, trần thạch cao, điện nước và cửa sắt. Khảo sát tận nơi, báo giá rõ ràng. Hotline 0869 577 686.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
@@ -67,7 +67,6 @@ export const metadata: Metadata = {
     "trần thạch cao",
     "điện nước",
     "cửa sắt",
-    "điện lạnh",
     "sửa nhà Quận 12",
     "sửa nhà Gò Vấp",
     "sửa nhà TP.HCM",

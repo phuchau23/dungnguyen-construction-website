@@ -29,7 +29,6 @@ export function Footer() {
             <Link className="lk" href="/dich-vu/son-nuoc-son-dau">Sơn nước – Sơn dầu</Link>
             <Link className="lk" href="/dich-vu">Ốp lát · Trần thạch cao</Link>
             <Link className="lk" href="/dich-vu">Điện nước · Cửa sắt</Link>
-            <Link className="lk" href="/dich-vu/dien-lanh">Điện lạnh</Link>
           </div>
           <div className="flex flex-col gap-2.5 text-[15px] leading-normal">
             <div className="mono mb-1.5 text-xs text-accent">Liên hệ</div>

@@ -8,7 +8,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = pageMeta({
   title: "Liên hệ",
   description:
-    "Liên hệ Duy Long Home: hotline/Zalo 0869 577 686, email angiaphat.home@gmail.com, văn phòng 54/6A đường TTH 29, P. Tân Thới Hiệp, Quận 12, TP.HCM. Làm việc 7:00 – 21:00 cả tuần.",
+    "Liên hệ Duy Long Home: hotline/Zalo 0869 577 686, email duylonghome@gmail.com, văn phòng 54/6A đường TTH 29, P. Tân Thới Hiệp, Quận 12, TP.HCM. Làm việc 7:00 – 21:00 cả tuần.",
   path: "/lien-he",
 });
 

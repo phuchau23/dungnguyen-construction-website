@@ -101,9 +101,9 @@ export default async function CongTrinhChiTietPage({ params }: Props) {
             ))}
           </dl>
 
+          {project.photos && project.photos.length > 0 && (
           <div className="grid grid-cols-2 gap-4 lg:h-[560px] lg:grid-cols-[2fr_1fr]">
             <Placeholder
-              label="[Ảnh chính công trình]"
               src={project.photos?.[0]?.src}
               alt={project.photos?.[0]?.caption ?? project.name}
               sizes="(min-width: 1024px) 66vw, 100vw"
@@ -141,6 +141,7 @@ export default async function CongTrinhChiTietPage({ params }: Props) {
               </Placeholder>
             </div>
           </div>
+          )}
         </Container>
       </section>
 
@@ -191,7 +192,7 @@ export default async function CongTrinhChiTietPage({ params }: Props) {
               </div>
             ))}
           </div>
-          {(!project.photos || project.beforeAfter) && (
+          {before?.src && after?.src && (
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
             <Placeholder
               src={before?.src}

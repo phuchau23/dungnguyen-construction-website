@@ -9,7 +9,7 @@ import { articles, postCategories, searchArticles, type Article } from "@/lib/po
 export const metadata: Metadata = pageMeta({
   title: "Tin tức – Cẩm nang sửa nhà",
   description:
-    "Kinh nghiệm thực tế từ đội thợ Duy Long Home: chống thấm, sơn nước, điện nước, cải tạo, điện lạnh và cách đọc báo giá sửa nhà.",
+    "Kinh nghiệm thực tế từ đội thợ Duy Long Home: chống thấm, sơn nước, điện nước, cải tạo và cách đọc báo giá sửa nhà.",
   path: "/tin-tuc",
 });
 

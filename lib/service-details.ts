@@ -122,7 +122,7 @@ export const serviceDetails: ServiceDetail[] = [
       title: "Vì sao nhà bị thấm?",
       text: "Phần lớn nhà phố tại TP.HCM bị thấm ở sân thượng, nhà vệ sinh và tường giáp ranh. Nguyên nhân thường đến từ lớp chống thấm cũ đã lão hóa, cổ ống xử lý chưa kỹ, vết nứt do co ngót hoặc độ dốc thoát nước không đạt. Mỗi nguyên nhân cần một cách xử lý khác nhau, vì vậy khảo sát đúng là bước quan trọng nhất.",
       image: "[Ảnh thi công chống thấm sân thượng]",
-      src: "/chong-tham/1790684753141_751968165130597158_751968165130597158_83740481b7ef5b7a0193644f814f1f69.jpg",
+      src: "/chong-tham/chong-tham-lan-lop-phu.jpg",
     },
     signs: {
       title: "6 dấu hiệu nhà đang bị thấm",
@@ -526,7 +526,7 @@ export const serviceDetails: ServiceDetail[] = [
       title: "Vì sao cửa sắt nhanh rỉ, xệ?",
       text: "Cửa, cổng sắt ngoài trời chịu nắng mưa liên tục; nếu không xử lý chống rỉ kỹ, lớp sơn bong và sắt bị ăn mòn từ mối hàn. Bản lề, bánh xe lâu ngày mòn khiến cửa xệ, kẹt. Chọn đúng vật liệu và phương án sơn phù hợp giúp cửa bền và ít phải bảo trì.",
       image: "[Ảnh gia công cửa, cổng sắt]",
-      src: "/lam-cua-sat/1790684716737_751968165130597158_751968165130597158_d2cfac28c133dbf4abb92586baf74b98.jpg",
+      src: "/lam-cua-sat/1790996243968_751968165130597158_751968165130597158_0a9cf5c762a5588fd73269086b2dd275.jpg",
     },
     signs: {
       title: "6 dấu hiệu cần sửa, làm mới cửa sắt",
@@ -568,9 +568,9 @@ export const serviceDetails: ServiceDetail[] = [
       ],
     },
     gallery: [
-      { label: "Gia công chân cửa mới", src: "/lam-cua-sat/1790684716739_751968165130597158_751968165130597158_ab847dafc59b631a35f1120ed94531d9.jpg" },
-      { label: "Thay chân, sơn lót chống rỉ", src: "/lam-cua-sat/1790684716735_751968165130597158_751968165130597158_67c226bb52f28692bbbcd8ea6dd8f399.jpg" },
-      { label: "Sơn dặm hoàn thiện", src: "/lam-cua-sat/1790684716737_751968165130597158_751968165130597158_d2cfac28c133dbf4abb92586baf74b98.jpg" },
+      { label: "Gia công chân cửa mới", src: "/lam-cua-sat/1790996243927_751968165130597158_751968165130597158_3bffe94318e30b24439df57f9a32c537.jpg" },
+      { label: "Thay chân, sơn lót chống rỉ", src: "/lam-cua-sat/1790996243953_751968165130597158_751968165130597158_092f4f0f4fd17a4ac5abc5f48f580599.jpg" },
+      { label: "Sơn dặm hoàn thiện", src: "/lam-cua-sat/1790996243968_751968165130597158_751968165130597158_0a9cf5c762a5588fd73269086b2dd275.jpg" },
     ],
     form: {
       title: "Nhận tư vấn cửa sắt",
@@ -594,87 +594,6 @@ export const serviceDetails: ServiceDetail[] = [
           a: "Có. Gia đình gửi hình mẫu tham khảo, đội thợ đo đạc thực tế và điều chỉnh bản vẽ cho phù hợp kích thước.",
         },
         warranty("cửa sắt"),
-      ],
-    },
-  },
-  {
-    slug: "dien-lanh",
-    keywords: ["sửa máy lạnh", "vệ sinh máy lạnh", "máy lạnh chảy nước", "máy lạnh kém lạnh", "sửa máy lạnh Quận 12", "điện lạnh TP.HCM"],
-    title: "Điện lạnh",
-    titleHl: "sửa chữa tận nơi",
-    lead: "Vệ sinh, bơm gas, sửa chữa và tháo lắp máy lạnh; sửa tủ lạnh, máy giặt, máy nước nóng tại nhà — kiểm tra tận nơi, báo giá trước khi làm.",
-    intro: {
-      title: "Vì sao máy lạnh hay kém lạnh, chảy nước?",
-      text: "Bụi bẩn bám lâu ngày trên lưới lọc, dàn lạnh và dàn nóng làm máy giảm hiệu suất, tốn điện và dễ chảy nước. Ống thoát nước nghẹt, lắp sai độ dốc, thiếu gas hoặc hỏng tụ, board mạch cũng là nguyên nhân thường gặp. Kiểm tra đúng bệnh giúp sửa nhanh, không thay linh kiện thừa.",
-      image: "[Ảnh vệ sinh máy lạnh]",
-      src: "/dien-lanh/inverter-ac-repairing-service-500x500.webp",
-    },
-    signs: {
-      title: "6 dấu hiệu thiết bị điện lạnh cần kiểm tra",
-      items: [
-        "Máy lạnh chạy lâu nhưng không mát",
-        "Dàn lạnh nhỏ nước xuống tường, sàn",
-        "Có mùi hôi hoặc tiếng kêu lạ khi chạy",
-        "Đèn báo lỗi chớp, máy tự ngắt",
-        "Tủ lạnh không đông đá, đóng tuyết nhiều",
-        "Máy giặt không vắt, rò nước",
-      ],
-    },
-    items: {
-      title: "Hạng mục điện lạnh",
-      rows: [
-        { name: "Vệ sinh máy lạnh", scope: "Rửa dàn nóng, dàn lạnh, thông ống thoát nước, kiểm tra gas" },
-        { name: "Sửa chữa, bơm gas máy lạnh", scope: "Kiểm tra lỗi, xử lý xì gas, thay tụ, thay board" },
-        { name: "Tháo lắp, di dời máy lạnh", scope: "Tháo máy cũ, lắp vị trí mới, đi ống đồng, ống nước" },
-        { name: "Sửa tủ lạnh, máy giặt, máy nước nóng", scope: "Kiểm tra tận nơi, thay linh kiện, bảo hành sau sửa" },
-      ],
-    },
-    process: [
-      { t: "Tiếp nhận", d: "Ghi nhận tình trạng, hẹn giờ có mặt." },
-      { t: "Kiểm tra", d: "Đo gas, dòng điện, xác định lỗi." },
-      { t: "Báo giá", d: "Tư vấn phương án, báo giá trước khi làm." },
-      { t: "Sửa chữa", d: "Vệ sinh, thay linh kiện, bơm gas." },
-      { t: "Chạy thử", d: "Kiểm tra độ lạnh, thoát nước, tiếng ồn." },
-      { t: "Bàn giao", d: "Dọn dẹp sạch sẽ, hướng dẫn sử dụng." },
-    ],
-    materials: {
-      title: "Thiết bị, vật tư thường dùng",
-      items: [
-        "Máy xịt rửa áp lực",
-        "Đồng hồ đo gas",
-        "Gas R32, R410A",
-        "Ống đồng, bảo ôn",
-        "Tụ, board mạch thay thế",
-        "Bạt hứng nước vệ sinh",
-      ],
-    },
-    gallery: [
-      { label: "Trước khi vệ sinh" },
-      { label: "Đang xử lý" },
-      { label: "Sau khi hoàn thiện" },
-    ],
-    form: {
-      title: "Nhận tư vấn điện lạnh",
-      field: "Thiết bị cần xử lý",
-      options: ["Máy lạnh", "Tủ lạnh", "Máy giặt", "Máy nước nóng", "Chưa rõ"],
-    },
-    faq: {
-      title: "Hỏi đáp",
-      titleHl: "điện lạnh",
-      items: [
-        {
-          q: "Bao lâu nên vệ sinh máy lạnh một lần?",
-          a: "Gia đình dùng thường xuyên nên vệ sinh 4–6 tháng một lần; lưới lọc có thể tự tháo rửa hằng tháng. Nhà gần đường lớn, nhiều bụi nên vệ sinh dày hơn.",
-        },
-        {
-          q: "Bao lâu thì thợ có mặt?",
-          a: "Tùy lịch và khu vực, thường trong ngày. Trường hợp máy chảy nước nhiều hoặc chập điện được ưu tiên sắp xếp sớm nhất có thể.",
-        },
-        {
-          q: "Máy lạnh thiếu gas có phải thay máy không?",
-          a: "Không. Thợ sẽ tìm và xử lý điểm xì trước, sau đó bơm bổ sung đúng loại gas. Chỉ khi máy nén hỏng nặng mới cân nhắc thay máy.",
-        },
-        warranty("điện lạnh"),
       ],
     },
   },

@@ -191,31 +191,24 @@ export function CtaBanner({
   );
 }
 
-/** Ô ảnh giữ chỗ (kẻ sọc) — thay bằng next/image khi có ảnh thật */
+/** Ô ảnh — không có ảnh thật thì không hiện gì */
 export function Placeholder({
-  label,
   src,
   alt = "",
   sizes = "(min-width: 1024px) 33vw, 100vw",
   className = "",
   children,
 }: {
-  label?: string;
-  /** Có ảnh thì hiện ảnh thay cho nền kẻ sọc */
   src?: string;
   alt?: string;
   sizes?: string;
   className?: string;
   children?: ReactNode;
 }) {
+  if (!src) return null;
   return (
-    <div className={`${src ? "overflow-hidden bg-sand" : "ph"} relative ${className}`}>
-      {src && <Image src={src} alt={alt} fill sizes={sizes} className="object-cover" />}
-      {label && !src && (
-        <span className="mono absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 whitespace-nowrap text-[11px] text-muted">
-          {label}
-        </span>
-      )}
+    <div className={`relative overflow-hidden bg-sand ${className}`}>
+      <Image src={src} alt={alt} fill sizes={sizes} className="object-cover" />
       {children}
     </div>
   );
