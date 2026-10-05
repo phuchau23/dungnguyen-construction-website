@@ -18,7 +18,6 @@ export const services: Service[] = [
   { slug: "tran-thach-cao", code: "S-05", icon: "ceiling", time: "2 – 5 ngày", title: "Trần thạch cao", desc: "Trần trang trí, trần chìm, trần nổi. Đẹp, bền, chống ẩm, chống nóng.", bullets: ["Khung xương tiêu chuẩn", "Tấm chống ẩm cho WC", "Kết hợp đèn hắt LED"] },
   { slug: "dien-nuoc", code: "S-06", icon: "bolt", time: "Trong ngày", title: "Điện nước", desc: "Sửa chữa, lắp đặt thiết bị điện nước, thay ống, bóng đèn, thiết bị vệ sinh.", bullets: ["Dò tìm rò rỉ nước", "Đi lại dây điện âm tường", "Lắp máy bơm, bồn nước"] },
   { slug: "cua-sat", code: "S-07", icon: "gate", time: "3 – 10 ngày", title: "Cửa sắt", desc: "Làm mới, sửa chữa cửa sắt, cổng, hàng rào, lan can, mái che, cửa cuốn.", bullets: ["Gia công theo bản vẽ", "Sơn tĩnh điện / sơn dầu", "Mái tôn, mái kính"] },
-  { slug: "dien-lanh", code: "S-08", icon: "snow", time: "Trong ngày", title: "Điện lạnh", desc: "Vệ sinh, sửa chữa, lắp đặt máy lạnh, tủ lạnh, máy giặt, máy nước nóng.", bullets: ["Vệ sinh, bơm gas máy lạnh", "Tháo lắp, di dời máy", "Sửa tủ lạnh, máy giặt"] },
 ];
 
 export type Project = {
@@ -34,11 +33,11 @@ export type Project = {
 
 export const projects: Project[] = [
   { slug: "son-lat-op-go-go-vap", image: "/son-op-go/1790740739263_751968165130597158_751968165130597158_f744a2d4b78a79096737a274dc3983e1.jpg", cat: "Cải tạo", name: "Sơn lát ốp gỗ", area: "Gò Vấp", size: "4 × 16 m", time: "~ 35 ngày" },
-  { slug: "chong-tham-san-thuong-quan-12", image: "/chong-tham/1790684753141_751968165130597158_751968165130597158_83740481b7ef5b7a0193644f814f1f69.jpg", cat: "Chống thấm", name: "Chống thấm sân thượng", area: "Quận 12", size: "60 m²", time: "3 ngày" },
+  { slug: "chong-tham-san-thuong-quan-12", image: "/chong-tham/1790996283519_751968165130597158_751968165130597158_55db2ffbd52106b065cb384bf1aeadd5.jpg", cat: "Chống thấm", name: "Chống thấm sân thượng và máng xối", area: "Quận 12", size: "60 m²", time: "3 ngày" },
   { slug: "sua-nha-tron-goi-nha-pho-nhieu-tang", image: "/sua-nha-tron-goi/1790744682376_751968165130597158_751968165130597158_db721af947cc3690371a71343db7106f.jpg", cat: "Cải tạo", name: "Sửa nhà trọn gói nhà phố nhiều tầng", area: "TP.HCM", size: "Nhà phố nhiều tầng", time: "Đang cập nhật" },
   { slug: "xay-to-son-ba-tuong-cau-thang", image: "/thay-nen-nha/1790746071156_751968165130597158_751968165130597158_38e751793d80adb68359e94d3517c383.jpg", cat: "Cải tạo", name: "Xây tô, sơn bả tường vòm cầu thang", area: "TP.HCM", size: "Tường cầu thang, trần", time: "Đang cập nhật" },
-  { slug: "sua-son-cua-sat-my-thuat-hoc-mon", image: "/lam-cua-sat/1790684716737_751968165130597158_751968165130597158_d2cfac28c133dbf4abb92586baf74b98.jpg", cat: "Cửa sắt", name: "Sửa, sơn lại cửa sắt mỹ thuật", area: "Hóc Môn", size: "Cửa mặt tiền 4 cánh", time: "6 ngày" },
-  { slug: "op-lam-song-gia-go-cua-hang", image: "/op-tuong/1790684839096_751968165130597158_751968165130597158_da91f1d4f5c5331ca11d54a0112f6d1a.jpg", cat: "Ốp tường", name: "Ốp lam sóng giả gỗ chân tường", area: "Quận 12", size: "Chân tường cửa hàng", time: "1 ngày" },
+  { slug: "sua-son-cua-sat-my-thuat-hoc-mon", image: "/lam-cua-sat/1790996243968_751968165130597158_751968165130597158_0a9cf5c762a5588fd73269086b2dd275.jpg", cat: "Cửa sắt", name: "Sửa, sơn lại cửa sắt mỹ thuật", area: "Hóc Môn", size: "Cửa mặt tiền 4 cánh", time: "6 ngày" },
+  { slug: "sua-chua-quan-ca-phe-binh-thanh", image: "/op-tuong/1791124557457_751968165130597158_751968165130597158_1dfb01f9a2d6be17705e99248c219456.jpg", cat: "Cải tạo", name: "Sửa chữa toàn bộ quán cà phê", area: "Bình Thạnh", size: "Mặt bằng tầng trệt", time: "1 ngày" },
 ];
 
 export type Post = {

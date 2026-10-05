@@ -152,16 +152,6 @@
   }
 }
 
-/* Image placeholder (chưa có ảnh thật) */
-.ph {
-  background-color: var(--color-line-soft);
-  background-image: repeating-linear-gradient(
-    135deg,
-    rgba(27, 35, 48, 0.1) 0 1px,
-    transparent 1px 12px
-  );
-}
-
 /* Hover motion on cards */
 .qc {
   transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1), box-shadow 0.4s;

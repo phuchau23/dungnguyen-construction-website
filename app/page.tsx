@@ -15,7 +15,7 @@ import { faqs, quotes } from "./_home/data";
 export const metadata: Metadata = pageMeta({
   title: "Duy Long Home – Sửa chữa nhà trọn gói TP.HCM",
   description:
-    "Sửa chữa, cải tạo nhà trọn gói tại TP.HCM: chống thấm, sơn nước, ốp lát, trần thạch cao, điện nước, cửa sắt, điện lạnh. Khảo sát tận nơi, báo giá rõ ràng, bảo hành dài hạn. Hotline 0869 577 686.",
+    "Sửa chữa, cải tạo nhà trọn gói tại TP.HCM: chống thấm, sơn nước, ốp lát, trần thạch cao, điện nước và cửa sắt. Khảo sát tận nơi, báo giá rõ ràng, bảo hành dài hạn. Hotline 0869 577 686.",
   keywords: ["sửa chữa nhà", "sửa nhà trọn gói", "cải tạo nhà", "sửa chữa nhà TP.HCM", "sửa nhà Quận 12", "sửa nhà Gò Vấp", "chống thấm", "sơn nhà", "trần thạch cao", "sửa điện nước", "Duy Long Home"],
   path: "/",
   absoluteTitle: true,
@@ -49,7 +49,7 @@ export default function Home() {
 function Hero() {
   return (
     <section className="relative flex min-h-[calc(100svh-68px)] items-center justify-center overflow-hidden bg-ink lg:min-h-[calc(100svh-172px)]">
-      <Image src="/chong-tham/1790684753141_751968165130597158_751968165130597158_83740481b7ef5b7a0193644f814f1f69.jpg" alt="Thợ Duy Long Home thi công chống thấm sân thượng nhà phố tại TP.HCM" fill preload sizes="100vw" className="object-cover" />
+      <Image src="/banneer.jpg" alt="Nhà phố hiện đại sau khi hoàn thiện, mặt tiền sáng đèn – Duy Long Home TP.HCM" fill preload sizes="100vw" className="object-cover object-[65%_center]" />
       <div className="absolute inset-0 bg-black/55" aria-hidden="true" />
       <Container className="relative flex flex-col items-center gap-[18px] py-16 text-center text-white lg:gap-[26px] lg:pb-[130px] lg:pt-20">
         <div className="mono flex items-center gap-3 text-[11px] text-peach lg:text-[13px]">
@@ -62,7 +62,7 @@ function Hero() {
           <span className="text-accent">trọn gói</span> TP.HCM
         </h1>
         <p className="m-0 max-w-[640px] text-base leading-[1.6] text-white/85 lg:text-[19px]">
-          Chống thấm, sơn nước, ốp lát, trần thạch cao, điện nước, cửa sắt, điện lạnh — một đầu mối từ khảo sát,
+          Chống thấm, sơn nước, ốp lát, trần thạch cao, điện nước, cửa sắt — một đầu mối từ khảo sát,
           báo giá đến thi công và bảo hành.
         </p>
       </Container>
@@ -171,7 +171,7 @@ function Services() {
           eyebrow="Dịch vụ chủ lực"
           title={
             <>
-              8 hạng mục <Hl>một đầu mối</Hl>
+              7 hạng mục <Hl>một đầu mối</Hl>
             </>
           }
           aside="Mỗi hạng mục đều được khảo sát tận nơi, tư vấn phương án phù hợp hiện trạng và ngân sách của gia đình."
@@ -263,9 +263,8 @@ function Pricing() {
             <SvcLink slug="tran-thach-cao">trần thạch cao</SvcLink> phân biệt trần chìm, trần nổi và trần giật cấp có đèn hắt.
           </p>
           <p className="m-0">
-            Những việc gọn hơn như <SvcLink slug="dien-nuoc">điện nước</SvcLink>, <SvcLink slug="cua-sat">cửa sắt</SvcLink>{" "}
-            hay <SvcLink slug="dien-lanh">điện lạnh</SvcLink> — dò rò rỉ, đi lại dây, làm cổng, vệ sinh hay bơm gas máy
-            lạnh — thường có giá ngay khi thợ kiểm tra xong, nhiều trường hợp làm luôn trong ngày.
+            Những việc gọn hơn như <SvcLink slug="dien-nuoc">điện nước</SvcLink> hay{" "}
+            <SvcLink slug="cua-sat">cửa sắt</SvcLink> — dò rò rỉ, đi lại dây, làm cổng, sửa lan can — thường có giá ngay khi thợ kiểm tra xong, nhiều trường hợp làm luôn trong ngày.
           </p>
           <p className="m-0">
             Muốn có giá nhanh, gọi{" "}
@@ -380,7 +379,7 @@ function Projects() {
               href={`/cong-trinh/${j.slug}`}
               className="pj flex flex-col overflow-hidden rounded-lg border border-line bg-white lg:min-h-[330px]"
             >
-              <Placeholder label="[Ảnh công trình]" src={j.image} alt={j.name} className="h-[190px] shrink-0">
+              <Placeholder src={j.image} alt={j.name} className="h-[190px] shrink-0">
                 <span className="mono absolute left-4 top-4 rounded bg-ink px-2.5 py-1.5 text-[11px] text-white">{j.cat}</span>
               </Placeholder>
               <span className="flex flex-col gap-2 px-5 py-[18px]">
