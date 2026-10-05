@@ -26,14 +26,14 @@ const aboutStats = [
   { v: "10+", l: "năm kinh nghiệm" },
   { v: "1.500+", l: "công trình đã bàn giao" },
   { v: "30+", l: "thợ lành nghề" },
-  { v: "8", l: "hạng mục thi công" },
+  { v: "7", l: "hạng mục thi công" },
 ];
 
 const team = [
   { img: "/sua-nha-tron-goi/1790744682322_751968165130597158_751968165130597158_f8357baa844150d41fc1e22884c717b5.jpg", title: "Kỹ sư kết cấu", text: "Khảo sát hiện trạng, đánh giá an toàn trước khi cải tạo, nâng tầng." },
   { img: "/sua-nha-tron-goi/1790744682354_751968165130597158_751968165130597158_07ba5370a4c47c109221d145e3723d8a.jpg", title: "Giám sát thi công", text: "Theo dõi tiến độ, nghiệm thu từng hạng mục cùng chủ nhà." },
-  { img: "/chong-tham/1790684753141_751968165130597158_751968165130597158_83740481b7ef5b7a0193644f814f1f69.jpg", title: "Tổ thợ chống thấm – sơn", text: "Chuyên xử lý sân thượng, nhà vệ sinh, tường ngoài và sơn hoàn thiện." },
-  { img: "/lam-cua-sat/1790684716739_751968165130597158_751968165130597158_ab847dafc59b631a35f1120ed94531d9.jpg", title: "Tổ thợ điện nước – điện lạnh – cửa sắt", text: "Sửa điện nước, vệ sinh và sửa chữa máy lạnh, gia công lắp đặt cửa sắt, lan can." },
+  { img: "/chong-tham/1790996283519_751968165130597158_751968165130597158_55db2ffbd52106b065cb384bf1aeadd5.jpg", title: "Tổ thợ chống thấm – sơn", text: "Chuyên xử lý sân thượng, nhà vệ sinh, tường ngoài và sơn hoàn thiện." },
+  { img: "/lam-cua-sat/1790996243927_751968165130597158_751968165130597158_3bffe94318e30b24439df57f9a32c537.jpg", title: "Tổ thợ điện nước – cửa sắt", text: "Sửa điện nước, dò rò rỉ, gia công lắp đặt cửa sắt, cổng, lan can." },
 ];
 
 export default function GioiThieuPage() {
@@ -54,7 +54,6 @@ export default function GioiThieuPage() {
       <section className="bg-white py-14 lg:py-[90px]">
         <Container className="flex flex-col gap-10 lg:flex-row lg:items-stretch lg:gap-16">
           <Placeholder
-            label="[Ảnh đội thợ tại công trình]"
             src="/thay-nen-nha/1790746071156_751968165130597158_751968165130597158_38e751793d80adb68359e94d3517c383.jpg"
             alt="Đội thợ Duy Long Home xây lại tường vòm cầu thang"
             sizes="(min-width: 1024px) 620px, 100vw"
@@ -77,7 +76,7 @@ export default function GioiThieuPage() {
             <p className="m-0 text-base leading-[1.7] text-muted lg:text-[17px]">
               Duy Long Home khởi đầu là một tổ thợ nhỏ tại Quận 12, nhận chống thấm và sửa điện nước cho bà con quanh
               khu Tân Thới Hiệp. Khách cũ giới thiệu khách mới, tổ thợ dần mở rộng thêm sơn nước, ốp lát, trần thạch
-              cao, cửa sắt và điện lạnh.
+              cao và cửa sắt.
             </p>
             <p className="m-0 text-base leading-[1.7] text-muted lg:text-[17px]">
               Đến nay, chúng tôi vẫn giữ cách làm cũ: đến tận nơi xem nhà, nói rõ nguyên nhân hư hỏng, đưa phương án
@@ -141,7 +140,7 @@ export default function GioiThieuPage() {
           <div className="grid grid-cols-1 gap-4 [perspective:1400px] sm:grid-cols-2 lg:grid-cols-4">
             {team.map((m) => (
               <div key={m.title} className="pj flex flex-col overflow-hidden rounded-lg border border-line bg-white lg:min-h-[400px]">
-                <Placeholder label="[Ảnh]" src={m.img} alt={m.title} className="h-[240px] shrink-0" />
+                <Placeholder src={m.img} alt={m.title} className="h-[240px] shrink-0" />
                 <div className="flex flex-col gap-2 p-5">
                   <h3 className="cd m-0 text-[26px] font-extrabold leading-none">{m.title}</h3>
                   <p className="m-0 text-sm leading-[1.55] text-muted">{m.text}</p>

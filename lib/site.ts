@@ -22,7 +22,7 @@ export const site = {
   zaloHref: "https://zalo.me/0869577686",
   messengerHref: "#",
   facebookHref: "https://www.facebook.com/profile.php?id=61595173610062",
-  email: "angiaphat.home@gmail.com",
+  email: "duylonghome@gmail.com",
   address: "54/6A đường TTH 29, phường Tân Thới Hiệp, Quận 12, TP.HCM",
   addressShort: "54/6A đường TTH 29, P. Tân Thới Hiệp, Quận 12",
   hours: "7:00 – 21:00 (Cả tuần)",

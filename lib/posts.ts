@@ -7,7 +7,6 @@ export const postCategories: PostCategory[] = [
   { slug: "chong-tham", label: "Chống thấm" },
   { slug: "son-nuoc", label: "Sơn nước" },
   { slug: "cai-tao", label: "Cải tạo" },
-  { slug: "dien-lanh", label: "Điện lạnh" },
   { slug: "bao-gia", label: "Báo giá" },
 ];
 
@@ -41,6 +40,80 @@ export type Article = {
 };
 
 export const articles: Article[] = [
+  {
+    slug: "quy-trinh-chong-tham-san-thuong-dung-ky-thuat",
+    image: "/chong-tham/chong-tham-san-thuong-cover.jpg",
+    tag: "Chống thấm",
+    tagSlug: "chong-tham",
+    title: "Quy trình chống thấm sân thượng đúng kỹ thuật: 6 bước để không phải làm lại",
+    excerpt:
+      "Phần lớn sân thượng thấm lại sau vài mùa mưa không phải do vật liệu kém, mà do bỏ qua bước xử lý nền và ngâm nước thử.",
+    date: "10/2026",
+    readTime: "7 phút đọc",
+    authorTeam: "Tổ thợ chống thấm",
+    sections: [
+      {
+        id: "m0",
+        heading: "1. Khảo sát: tìm đúng chỗ nước vào",
+        paragraphs: [
+          "Vết ố trên trần thường không nằm ngay dưới chỗ thấm. Nước có thể vào từ cổ ống thoát, chân tường lan can hay một khe nứt cách đó vài mét rồi chảy theo mặt sàn bê tông. Vì vậy trước khi báo giá, kỹ thuật viên cần lên sân thượng xem độ dốc, các vết nứt, cổ ống, rồi xuống tầng dưới đối chiếu với vết ố.",
+          "Bỏ qua bước này, đội thợ chỉ quét lại chỗ nhìn thấy, và nước vẫn vào từ chỗ cũ.",
+        ],
+      },
+      {
+        id: "m1",
+        heading: "2. Vệ sinh và xử lý bề mặt",
+        paragraphs: [
+          "Lớp chống thấm chỉ bám tốt trên nền sạch và chắc. Rêu mốc phải được cạo sạch, lớp vữa bong rộp phải đục bỏ, bụi bẩn phải được rửa đi. Với vật liệu gốc xi măng, mặt bê tông cần được tưới ẩm trước khi quét để lớp vật liệu không bị hút nước quá nhanh mà nứt.",
+          "Đây là bước tốn công nhất nhưng ít ai thấy, và cũng là bước hay bị làm ẩu nhất.",
+        ],
+      },
+      {
+        id: "m2",
+        heading: "3. Gia cố những điểm yếu trước",
+        paragraphs: [
+          "Cổ ống thoát nước, góc tiếp giáp giữa sàn và chân tường, khe nứt và mối nối là những nơi nước tìm vào đầu tiên. Các vị trí này cần được trám, bo góc và gia cố riêng trước khi quét lớp phủ cho cả sàn. Với cổ ống, thường dùng thêm băng cản nước hoặc vữa chuyên dụng quấn quanh.",
+        ],
+      },
+      {
+        id: "m3",
+        heading: "4. Thi công lớp chống thấm",
+        paragraphs: [
+          "Tùy hiện trạng và ngân sách, có thể dùng vật liệu gốc xi măng polymer, sơn gốc PU hoặc màng bitum khò nóng. Dù dùng loại nào, lớp chống thấm cần chạy liền từ mặt sàn lên chân tường một đoạn, không để đứt ở góc.",
+          "Nên quét ít nhất hai lớp, lớp sau quét vuông góc với lớp trước và chỉ quét khi lớp trước đã khô theo hướng dẫn của nhà sản xuất. Quét một lớp thật dày cho nhanh dễ nứt và bong khi gặp nắng nóng.",
+        ],
+      },
+      {
+        id: "m4",
+        heading: "5. Ngâm nước thử 48 giờ",
+        paragraphs: [
+          "Bịt các lỗ thoát, ngâm nước trên toàn bộ mặt sàn khoảng 48 giờ rồi kiểm tra trần tầng dưới. Nếu có chỗ ẩm, xử lý lại ngay khi bề mặt còn chưa bị phủ. Chủ nhà nên có mặt hoặc nhận ảnh, video kiểm tra trước khi đồng ý cho làm bước tiếp theo.",
+        ],
+      },
+      {
+        id: "m5",
+        heading: "6. Bảo vệ và hoàn trả bề mặt",
+        paragraphs: [
+          "Sân thượng có người đi lại hoặc đặt chậu cây nên có lớp bảo vệ phía trên, như vữa cán bảo vệ, gạch lát hoặc lớp phủ chịu mài mòn. Lớp chống thấm để trần dưới nắng TP.HCM quanh năm sẽ nhanh lão hóa hơn.",
+        ],
+      },
+      {
+        id: "m9",
+        heading: "Những lỗi khiến sân thượng thấm lại",
+        toc: false,
+        paragraphs: [
+          "Quét chống thấm lên nền còn rêu, bụi; không xử lý cổ ống và chân tường; quét một lớp cho xong; không ngâm nước thử; hoặc khoan bắt giàn phơi, chân bồn nước xuyên qua lớp chống thấm sau khi đã hoàn thiện. Tránh được những lỗi này, sân thượng có thể yên ổn nhiều mùa mưa.",
+          "Bạn có thể xem cách đội thợ làm thực tế ở công trình chống thấm sân thượng và máng xối tại Quận 12, có ảnh trước và sau.",
+        ],
+      },
+    ],
+    cta: {
+      title: "Sân thượng nhà bạn đã thấm lại sau khi sửa?",
+      text: "Gửi ảnh qua Zalo, kỹ thuật viên chỉ ra chỗ nước vào và cách xử lý dứt điểm.",
+    },
+    ctaAfter: 3,
+    callLabel: "Cần chống thấm?",
+  },
   {
     slug: "5-dau-hieu-san-thuong-dang-tham",
     image: "/chong-tham/1790684753143_751968165130597158_751968165130597158_d14a7b603ac49fa7c15cef31d8268c4e.jpg",
@@ -222,54 +295,6 @@ export const articles: Article[] = [
     },
     ctaAfter: 2,
     callLabel: "Cần sơn lại nhà?",
-  },
-  {
-    slug: "may-lanh-chay-nuoc-kem-lanh",
-    image: "/dien-lanh/img-02.jpg",
-    tag: "Điện lạnh",
-    tagSlug: "dien-lanh",
-    title: "Máy lạnh chảy nước, kém lạnh: nguyên nhân và khi nào nên gọi thợ",
-    excerpt: "Phần lớn do lâu ngày không vệ sinh, nhưng xì gas hay hỏng linh kiện thì cần thợ kiểm tra.",
-    date: "07/2026",
-    readTime: "4 phút đọc",
-    authorTeam: "Tổ thợ điện lạnh",
-    sections: [
-      {
-        id: "m0",
-        heading: "1. Dàn lạnh bám bụi, lâu ngày không vệ sinh",
-        paragraphs: [
-          "Lưới lọc và lá tản nhiệt bám bụi khiến gió yếu, máy chạy lâu mới mát và tốn điện hơn. Gia đình có thể tự tháo lưới lọc rửa nước mỗi tháng, còn dàn lạnh, dàn nóng nên vệ sinh bằng máy xịt áp lực 4–6 tháng một lần.",
-        ],
-      },
-      {
-        id: "m1",
-        heading: "2. Ống thoát nước bị nghẹt hoặc lắp sai độ dốc",
-        paragraphs: [
-          "Nước ngưng không thoát kịp sẽ tràn khỏi máng và nhỏ giọt xuống tường, sàn. Thường do rêu, bụi bẩn làm nghẹt ống hoặc ống thoát đi ngược dốc khi lắp đặt.",
-        ],
-      },
-      {
-        id: "m2",
-        heading: "3. Thiếu gas hoặc hỏng linh kiện",
-        paragraphs: [
-          "Máy chạy liên tục mà không lạnh, dàn nóng quay nhưng ống đồng bám tuyết là dấu hiệu thiếu gas. Máy không khởi động, chớp đèn báo lỗi có thể do tụ, board mạch hoặc máy nén.",
-        ],
-      },
-      {
-        id: "m9",
-        heading: "Khi nào nên gọi thợ?",
-        toc: false,
-        paragraphs: [
-          "Khi đã vệ sinh lưới lọc mà máy vẫn kém lạnh, chảy nước nhiều, có tiếng kêu lạ hoặc báo lỗi. Thợ kiểm tra áp suất gas, dòng điện và linh kiện, báo giá trước khi sửa.",
-        ],
-      },
-    ],
-    cta: {
-      title: "Máy lạnh nhà bạn chảy nước, kém lạnh?",
-      text: "Gọi hoặc nhắn Zalo, thợ điện lạnh đến kiểm tra và xử lý trong ngày.",
-    },
-    ctaAfter: 2,
-    callLabel: "Cần thợ điện lạnh?",
   },
   {
     slug: "cai-tao-nha-cu-lam-hang-muc-nao-truoc",

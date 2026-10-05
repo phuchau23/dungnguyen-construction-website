@@ -116,15 +116,6 @@ export const priceCategories: PriceCategory[] = [
       r("Cửa cuốn", "Lắp mới, sửa motor, thay lá cửa"),
     ],
   },
-  {
-    label: "Điện lạnh",
-    rows: [
-      r("Vệ sinh máy lạnh", "Rửa dàn nóng, dàn lạnh, thông ống thoát nước, kiểm tra gas"),
-      r("Sửa chữa, bơm gas máy lạnh", "Kiểm tra lỗi, xử lý xì gas, thay tụ, thay board"),
-      r("Tháo lắp, di dời máy lạnh", "Tháo máy cũ, lắp vị trí mới, đi ống đồng, ống nước"),
-      r("Sửa tủ lạnh, máy giặt, máy nước nóng", "Kiểm tra tận nơi, thay linh kiện, bảo hành sau sửa"),
-    ],
-  },
 ];
 
 export const faqs = [

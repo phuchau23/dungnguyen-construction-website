@@ -45,6 +45,7 @@ export default async function DichVuChiTietPage({ params }: Props) {
   if (!detail || !service) notFound();
 
   const others = services.filter((s) => s.slug !== slug);
+  const gallery = detail.gallery.filter((g) => g.src);
 
   const serviceJsonLd = {
     "@context": "https://schema.org",
@@ -86,7 +87,6 @@ export default async function DichVuChiTietPage({ params }: Props) {
               <BlockTitle>{detail.intro.title}</BlockTitle>
               <p className="m-0 text-base leading-[1.75] text-muted lg:text-[17px]">{detail.intro.text}</p>
               <Placeholder
-                label={detail.intro.image}
                 src={detail.intro.src}
                 alt={detail.intro.title}
                 sizes="(min-width: 1024px) 60vw, 100vw"
@@ -176,10 +176,11 @@ export default async function DichVuChiTietPage({ params }: Props) {
             </div>
 
             {/* Hình ảnh */}
+            {gallery.length > 0 && (
             <div className="flex flex-col gap-[18px]">
               <BlockTitle>Hình ảnh thực tế</BlockTitle>
               <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
-                {detail.gallery.map(({ label, src }) => (
+                {gallery.map(({ label, src }) => (
                   <Placeholder
                     key={label}
                     src={src}
@@ -193,6 +194,7 @@ export default async function DichVuChiTietPage({ params }: Props) {
                 ))}
               </div>
             </div>
+            )}
           </div>
 
           {/* Cột phải */}
