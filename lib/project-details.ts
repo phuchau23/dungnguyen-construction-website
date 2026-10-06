@@ -119,7 +119,6 @@ export const projectDetails: ProjectDetail[] = [
       { src: "/sua-nha-tron-goi/1790744682362_751968165130597158_751968165130597158_7755c03949c7f9fd9d3c1ff3bbc33812.jpg", caption: "Tháo dỡ gạch cũ, chuẩn bị chống thấm nhà vệ sinh" },
       { src: "/sua-nha-tron-goi/1790744682364_751968165130597158_751968165130597158_876254a4c6ae87abf7f81de9efa579ab.jpg", caption: "Nền và tường sau khi đục bỏ gạch cũ" },
       { src: "/sua-nha-tron-goi/1790744682366_751968165130597158_751968165130597158_e573643c5a9651d7fc23c67230fb9e93.jpg", caption: "Mặt bằng sạch, sẵn sàng cán nền và ốp lát lại" },
-      { src: "/sua-nha-tron-goi/1790744682352_751968165130597158_751968165130597158_b539ef539a02597805688cdf55e3189f.jpg", caption: "Trát vữa hoàn thiện mảng tường vòm cầu thang" },
       { src: "/sua-nha-tron-goi/1790744682344_751968165130597158_751968165130597158_89fd8a72872b666cdca46240d42bad12.jpg", caption: "Thi công trong nhà: giàn giáo, vật tư bột trét, sơn" },
       { src: "/sua-nha-tron-goi/1790744682348_751968165130597158_751968165130597158_b8be12c85b9337b6d3d597baca6ece05.jpg", caption: "Bả matit tường trước khi sơn" },
       { src: "/sua-nha-tron-goi/1790786750145_751968165130597158_751968165130597158_b7ef394052aeec8638875b4d20d072a5.jpg", caption: "Sơn trần trên giàn giáo" },
