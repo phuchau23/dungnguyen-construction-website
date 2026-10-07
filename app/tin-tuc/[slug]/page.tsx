@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { pageMeta } from "@/lib/seo";
+import { defaultOgImage, pageMeta } from "@/lib/seo";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Icon } from "@/components/Icon";
@@ -44,7 +44,7 @@ export default async function BaiVietPage({ params }: Props) {
     "@type": "Article",
     headline: post.title,
     description: post.excerpt,
-    image: [`${site.url}${post.image ?? "/og/og-default.jpg"}`],
+    image: [`${site.url}${post.image ?? defaultOgImage.url}`],
     datePublished: `${year}-${month}`,
     inLanguage: "vi",
     mainEntityOfPage: `${site.url}/tin-tuc/${post.slug}`,
