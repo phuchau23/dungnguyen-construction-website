@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { site } from "./site";
 
-/** Ảnh chia sẻ mặc định 1200×630 (logo + ảnh công trình) */
-export const defaultOgImage = { url: "/og/og-default.jpg", width: 1200, height: 630, alt: `${site.name} – Sửa chữa, cải tạo nhà cửa TP.HCM` };
+/** Ảnh chia sẻ mặc định 1280×512 (banner trang chủ) */
+export const defaultOgImage = { url: "/banneer.jpg", width: 1280, height: 512, alt: `${site.name} – Sửa chữa, cải tạo nhà cửa TP.HCM` };
 
 type PageMetaInput = {
   /** Tiêu đề trang (ghép với "| Duy Long Home" qua template ở layout) */
